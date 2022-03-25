@@ -26,6 +26,14 @@ h2 {
   font-size: 17px;
   font-weight: 100;
   padding: 10px;
+
+    img{
+        margin: 4px;
+        width: 40px;
+        padding-right: 10px;
+        position: relative;
+        object-fit: contain;
+    }
 }
 
 body {
@@ -33,11 +41,6 @@ body {
   display: inline;
   justify-content: center;
   align-items: center;
-
-  #logo {
-    width: 4%;
-    padding-right: 10px;
-  }
 
   .container {
     background-color: $color-fr;

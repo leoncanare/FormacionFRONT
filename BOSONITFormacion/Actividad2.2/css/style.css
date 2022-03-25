@@ -29,6 +29,15 @@ h2 {
   padding: 10px;
 }
 
+h2 img {
+  margin: 4px;
+  width: 40px;
+  padding-right: 10px;
+  position: relative;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 body {
   background-color: #dce4f3;
   display: inline;
@@ -38,11 +47,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body #logo {
-  width: 4%;
-  padding-right: 10px;
 }
 
 body .container {
