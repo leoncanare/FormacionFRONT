@@ -1,0 +1,122 @@
+$color-bg: #dce4f3;
+$color-br: #90b2ef;
+$color-fr: #f5f5f5;
+$color-bt-enviar: #e9caf2;
+$color-bt-limpiar: #f5deb3;
+
+* {
+  font-family: "Courier New", Courier, monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 25px;
+  text-shadow: 1px 1px 2px black;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 100;
+  padding: 10px;
+}
+
+body {
+  background-color: $color-bg;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+
+  #logo {
+    width: 4%;
+    padding-right: 10px;
+  }
+
+  .container {
+    background-color: $color-fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    width: 350px;
+    border-radius: 8px;
+    border: 5px solid $color-br;
+    box-shadow: 2px 2px 10px 0 black;
+  }
+
+  .form {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10;
+
+    .input_file {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5%;
+      padding: 2px;
+
+      input {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+        width: 43%;
+        height: 40%;
+        border: 1px solid black;
+        border-radius: 2px;
+      }
+      input:focus {
+        outline: 1.25px solid $color-br;
+        border-radius: 2px;
+      }
+      input:hover {
+        outline: 1.75px solid $color-br;
+        border-radius: 2px;
+      }
+    }
+
+    .input_check {
+      display: flex;
+      justify-content: n;
+      margin-bottom: 3%;
+
+      input {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+      }
+    }
+
+    .btn {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        border: 1px solid white;
+      }
+
+      input:hover {
+        border: 1px solid black;
+      }
+
+      #submit {
+        background-color: $color-bt-enviar;
+        margin-right: 10px;
+      }
+      #clean {
+        background-color: $color-bt-limpiar;
+        margin-left: 10px;
+      }
+    }
+  }
+}
