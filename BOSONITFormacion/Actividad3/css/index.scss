@@ -1,0 +1,83 @@
+$color-nums: #2f2f2f;
+$color-bg: #fff8e4;
+$color-calc: #103373;
+$color-btn: #cfd6e3;
+$color-shadw: #2f2f2f33;
+$color-pantalla: #8bff93;
+
+
+* {
+  font-family: "Red Hat Mono", monospace;
+  color: $color-nums;
+}
+
+body{
+    margin: 0;
+    background-color: $color-bg;
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .calculadora{
+        display: grid;
+        grid-template-columns: repeat(4,75px);
+        grid-template-rows: 160px repeat(5, 75px);
+        background-color: $color-calc;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 0px 5px $color-shadw;
+
+        button{
+            cursor: pointer;
+            margin: 5px;
+            padding: 0;
+            font-size: 25px;
+            border-radius: 20px;
+            border: 1px solid #2f2f2f;
+            background-color: $color-btn;
+            box-shadow: 15px 15px 10px -3px #0b2451;
+        }
+
+        button:active{
+            background-color: #7085ab;
+        }
+
+        .pantalla{
+            display: flex;
+            grid-column: 1 / -1;
+            padding: 15px;
+            margin: 10px 10px 20px;
+            flex-direction: column;
+            align-items: flex-end;
+            background-color: $color-pantalla;
+            border: 2px solid $color-calc;
+            border-radius: 5px;
+            text-align: right;
+            justify-content: space-between;
+            word-break: break-all;
+            box-shadow: 0px 0px 0px 10px $color-btn;
+        }
+
+        #linea1{
+            font-size: 30px;
+        }
+
+        #linea2{
+            font-size: 25px;
+        }
+
+        .operador_tecla, .operador{
+            color: red;
+            font-weight: 700;
+        }
+
+        .col2{
+            grid-column: span 2;
+        }
+
+    }
+}
