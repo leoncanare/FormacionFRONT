@@ -3,6 +3,7 @@ $color-br: #90b2ef;
 $color-fr: #f5f5f5;
 $color-bt-enviar: #e9caf2;
 $color-bt-limpiar: #f5deb3;
+$color-al: rgb(255, 0, 0);
 
 * {
   font-family: "Courier New", Courier, monospace;
@@ -105,18 +106,20 @@ body {
       align-items: center;
 
       input {
+        padding: 1px;
         border: 1px solid white;
+        box-shadow: 1px 1px 5px 0 black;
       }
 
       input:hover {
         border: 1px solid black;
       }
 
-      #submit {
+      #btn_submit {
         background-color: $color-bt-enviar;
         margin-right: 10px;
       }
-      #clean {
+      #btn_clean {
         background-color: $color-bt-limpiar;
         margin-left: 10px;
       }

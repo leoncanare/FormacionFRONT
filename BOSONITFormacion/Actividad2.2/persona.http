@@ -1,0 +1,42 @@
+@api = http://localhost:3000/personas
+
+### todas
+GET {{api}}
+
+### una
+GET {{api}}/2
+
+### creando
+POST {{api}}
+Content-Type: application/json
+
+{
+    "user_name": "Carol",
+    "user_surname": "Martin",
+    "password": 1234,
+    "user_email_emp": "camaso@gmail.com",
+    "user_email": "cama@gmail.com",
+    "city": "Segovia",
+    "active": true,
+    "ini_date": "02/05/2021",
+    "url_img": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png",
+    "fin_date": "02/09/2021",
+    "id":1
+}
+
+### actualizando
+PUT {{api}}/4
+Content-Type: application/json
+
+{
+    "user_name": "Carol",
+    "user_surname": "Hernandez",
+    "password": 1234,
+    "user_email_emp": "camaso@gmail.com",
+    "user_email": "cama@gmail.com",
+    "city": "Segovia",
+    "active": true,
+    "ini_date": "02/05/2021",
+    "url_img": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png",
+    "fin_date": "02/09/2021"
+}

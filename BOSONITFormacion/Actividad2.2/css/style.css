@@ -145,19 +145,22 @@ body .form .btn {
 }
 
 body .form .btn input {
+  padding: 1px;
   border: 1px solid white;
+  -webkit-box-shadow: 1px 1px 5px 0 black;
+          box-shadow: 1px 1px 5px 0 black;
 }
 
 body .form .btn input:hover {
   border: 1px solid black;
 }
 
-body .form .btn #submit {
+body .form .btn #btn_submit {
   background-color: #e9caf2;
   margin-right: 10px;
 }
 
-body .form .btn #clean {
+body .form .btn #btn_clean {
   background-color: #f5deb3;
   margin-left: 10px;
 }

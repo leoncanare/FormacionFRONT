@@ -1,0 +1,57 @@
+{
+  "personas": [
+    {
+      "user_name": "Paco",
+      "user_surname": "Gutierrez",
+      "password": 1234,
+      "user_email_emp": "peguso@gmail.com",
+      "user_email": "pegu@gmail.com",
+      "city": "Alcala",
+      "active": true,
+      "ini_date": "02/06/2021",
+      "url_img": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png",
+      "fin_date": "08/08/2021",
+      "id": 1
+    },
+    {
+      "user_name": "Sara",
+      "user_surname": "Arellano",
+      "password": 1234,
+      "user_email_emp": "saarso@gmail.com",
+      "user_email": "saar@gmail.com",
+      "city": "Benidorm",
+      "active": true,
+      "ini_date": "10/06/2021",
+      "url_img": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png",
+      "fin_date": "22/08/2021",
+      "id": 2
+    },
+    {
+      "user_name": "Silvia",
+      "user_surname": "Perez",
+      "password": 1234,
+      "user_email_emp": "sipeso@gmail.com",
+      "user_email": "sipe@gmail.com",
+      "city": "Pamplona",
+      "active": true,
+      "ini_date": "18/05/2021",
+      "url_img": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png",
+      "fin_date": "12/09/2021",
+      "id": 3
+    },
+    {
+      "user_name": "Carol",
+      "user_surname": "Hernandez",
+      "password": 1234,
+      "user_email_emp": "camaso@gmail.com",
+      "user_email": "cama@gmail.com",
+      "city": "Segovia",
+      "active": true,
+      "ini_date": "02/05/2021",
+      "url_img": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png",
+      "fin_date": "02/09/2021",
+      "id": 4
+    }
+  ]
+}
+
