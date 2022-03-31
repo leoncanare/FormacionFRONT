@@ -1,4 +1,4 @@
-class Calculadora{
+class Calculos{
 
     sumar(num1, num2){
         return num1 + num2;
@@ -17,6 +17,6 @@ class Calculadora{
     }
     
     exp(num1, num2){
-        return Math.pow(num2, num1);
+        return num2**num1;
     }
 }

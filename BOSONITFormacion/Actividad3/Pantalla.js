@@ -1,8 +1,8 @@
-class Display {
-    constructor(displayValorLinea2, displayValorLinea1){
-        this.displayValorLinea1 = displayValorLinea1;
-        this.displayValorLinea2 = displayValorLinea2;
-        this.calculadora = new Calculadora();
+class Pantalla {
+    constructor(pantallaValorLinea2, pantallaValorLinea1){
+        this.pantallaValorLinea1 = pantallaValorLinea1;
+        this.pantallaValorLinea2 = pantallaValorLinea2;
+        this.calculos = new Calculos();
         this.tipoOperacion = undefined;
         this.valorLinea1 = '';
         this.valorLinea2 = '';
@@ -36,8 +36,8 @@ class Display {
     }
 
     imprimirValores(){
-        this.displayValorLinea1.textContent = this.valorLinea1;
-        this.displayValorLinea2.textContent = `${this.valorLinea2} ${this.signos[this.tipoOperacion] || ''}`;
+        this.pantallaValorLinea1.textContent = this.valorLinea1;
+        this.pantallaValorLinea2.textContent = `${this.valorLinea2} ${this.signos[this.tipoOperacion] || ''}`;
     }
 
     calcular(){
@@ -45,7 +45,7 @@ class Display {
         const valorLinea1 = parseFloat(this.valorLinea1);
 
         if(isNaN(valorLinea1) || isNaN(valorLinea2)) return
-        this.valorLinea1 = this.calculadora[this.tipoOperacion](valorLinea1, valorLinea2);
+        this.valorLinea1 = this.calculos[this.tipoOperacion](valorLinea1, valorLinea2);
     }
 
 }
