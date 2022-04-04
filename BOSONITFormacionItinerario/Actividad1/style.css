@@ -1,0 +1,44 @@
+.flexcontainer{
+    display: flex;
+}
+
+.flexcontainer2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flexcontainer3{
+    display: flex;
+    justify-content: right;
+}
+
+#s {
+    background-color: red;
+    width: 200px;
+    height: 75px;
+    margin: 10px;
+    text-align: left;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+#s1{
+    background-color: blue;
+    width: 200px;
+    height: 125px;
+    margin: 10px;
+    text-align: left;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+#s3 {
+    background-color: red;
+    margin: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+    width:30%; 
+    text-align: center;
+}
+
