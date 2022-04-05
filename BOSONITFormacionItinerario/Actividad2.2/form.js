@@ -1,5 +1,16 @@
 //Boton enviar datos
 let buttonSubmit = document.getElementById('btn_submit');
+//Declaramos el contenido para los casilleros.
+input_nombre = document.querySelector('#input_nombre');
+input_apellido = document.querySelector('#input_apellido'); 
+input_contraseña = document.querySelector('#input_contraseña'); 
+input_em_emp = document.querySelector('#input_em_emp') 
+input_em = document.querySelector('#input_em') 
+input_ciudad = document.querySelector('#input_ciudad') 
+input_atv = document.querySelector('#input_atv') 
+input_fech_ini = document.querySelector('#input_fech_ini') 
+input_url = document.querySelector('#input_url') 
+input_fech_fin = document.querySelector('#input_fech_fin')
 
 buttonSubmit.addEventListener('click', function(){
     let input = document.getElementById('input_nombre');
@@ -71,11 +82,8 @@ buttonClean.addEventListener('click', function(){
     let input10 = document.getElementById('input_fech_fin');
     input10.value = '';
 
-    alert('Se limpiaron todos tus datos.');
+    alert('Se van a limpiar todos tus datos.');
 });
-
-
-
 
 const uploadPersonas = async() =>{
     
@@ -90,6 +98,17 @@ const uploadPersonas = async() =>{
         
             console.log(datos);
             
+            input_nombre.value = datos.at(-1).user_name
+            input_apellido.value = datos.at(-1).user_surname
+            input_contraseña.value = datos.at(-1).password
+            input_em_emp.value = datos.at(-1).user_email_emp
+            input_em.value = datos.at(-1).user_email
+            input_ciudad.value = datos.at(-1).city
+            input_atv.value = datos.at(-1).active
+            input_fech_ini.value = datos.at(-1).ini_date
+            input_url.value = datos.at(-1).url_img
+            input_fech_fin.value = datos.at(-1).fin_date
+
         }else{
             console.log('No conocemos su error ponganse en contacto con nosotros');
         }

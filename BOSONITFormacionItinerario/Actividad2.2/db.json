@@ -8,9 +8,9 @@
       "user_email": "pegu@gmail.com",
       "city": "Alcala",
       "active": true,
-      "ini_date": "02/06/2021",
+      "ini_date": "2021-06-02",
       "url_img": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png",
-      "fin_date": "08/08/2021",
+      "fin_date": "2021-08-08",
       "id": 1
     },
     {
@@ -21,9 +21,9 @@
       "user_email": "saar@gmail.com",
       "city": "Benidorm",
       "active": true,
-      "ini_date": "10/06/2021",
+      "ini_date": "2021-06-10",
       "url_img": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png",
-      "fin_date": "22/08/2021",
+      "fin_date": "2021-08-20",
       "id": 2
     },
     {
@@ -34,9 +34,9 @@
       "user_email": "sipe@gmail.com",
       "city": "Pamplona",
       "active": true,
-      "ini_date": "18/05/2021",
+      "ini_date": "2021-05-18",
       "url_img": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png",
-      "fin_date": "12/09/2021",
+      "fin_date": "2021-09-12",
       "id": 3
     },
     {
@@ -47,9 +47,9 @@
       "user_email": "cama@gmail.com",
       "city": "Segovia",
       "active": true,
-      "ini_date": "02/05/2021",
+      "ini_date": "2021-05-02",
       "url_img": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_960_720.png",
-      "fin_date": "02/09/2021",
+      "fin_date": "2021-09-02",
       "id": 4
     }
   ]
