@@ -8,7 +8,9 @@ import { MainPageComponent } from './main-page/main-page.component';
   declarations: [
     MainPageComponent
   ],
-  exports: [],
+  exports: [
+    MainPageComponent
+  ],
   imports: [
     CommonModule
   ]

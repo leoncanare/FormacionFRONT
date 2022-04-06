@@ -38,3 +38,12 @@
   .p-1 {
     padding: 1px;
   }
+
+  .row {
+    display: flex;
+  }
+
+  .col {
+    flex-grow: 1;
+    margin-right: 3px;
+  }
