@@ -1,0 +1,97 @@
+/* font-family: 'Arvo', serif; */
+/* font-family: 'Red Hat Mono', monospace; */
+
+body{
+    background-color: whitesmoke;
+    font-family: 'Red Hat Mono', monospace;
+    margin: 0;
+    text-align: center;
+}
+
+main{
+    background-color:#e74e58;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 3%;
+}
+
+/* HeaderTitle styles */
+
+h1{
+    font-size: 4rem;
+    font-family: 'Arvo', serif;
+    color: #273c42;
+    text-shadow: 2px 2px #273c428c;
+    padding-top: 3%;
+}
+
+#title{
+    font-size: 1.5rem;
+    font-family: 'Arvo', serif;
+    color: #273c42;
+}
+
+/*HeaderImg styles */
+
+#img-div{
+    background-color: white;
+    padding: 0 0 2% 0;
+    height: 100%;
+}
+
+#image{
+    max-width: 100%;
+    clip-path: inset(12% 0 0 0);
+}
+
+#img-caption{
+    margin-top: 1%;
+}
+
+img{
+   display: block;
+   margin: auto;
+}
+
+/*Content styles */
+
+.container{
+    margin: 2% 30% 0 30% ;
+    padding-bottom: 2%;
+    /* border: solid 20px #273c42; */
+}
+
+#container-text{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+h3{
+    font-size: 1.4rem;
+    padding: 3% 0 3% 0;
+}
+
+li{
+    margin-top: 1em;
+}
+
+.container p{
+    font-size: 22px;
+}
+
+cite{
+    font-size: 20px;
+}
+
+/*Footer styles */
+
+footer{
+    font-size: 1.5rem;
+    font-family: 'Arvo', serif;
+    color: #273c42;
+}
+
+#tribute-link{
+    color: #74949c;
+}

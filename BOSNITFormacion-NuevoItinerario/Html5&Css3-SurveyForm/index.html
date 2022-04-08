@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">My Survey Form</h1>
+        <p  id="description">Thanks to participate in my new survey form.</p>
+    </header>
+    <form id="survey-form">
+        <div class="form-inputs">
+            <label id="name-label" for="name">Name</label>
+            <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+            />
+        </div>
+        <div class="form-inputs">
+            <label id="email-label" for="email">Email</label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your email"
+                required
+            />
+        </div>
+        <div class="form-inputs">
+            <label id="number-label" for="number">Age (optional)</label>
+            <input
+              type="number"
+              name="age"
+              id="number"
+              min="10"
+              max="99"
+              class="form-control"
+              placeholder="Age"
+            />
+        </div>
+        <div class="form-inputs">
+            <p>Which option best describes your current role?</p>
+            <select id="dropdown" name="role" class="form-control" required>
+              <option disabled selected value>Select current role</option>
+              <option value="student">Student</option>
+              <option value="job">Full Time Job</option>
+              <option value="learner">Full Time Learner</option>
+              <option value="preferNo">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-inputs">
+            <p>Wolud you recomend my fomr Survey?</p>
+        <div class="input-chose">
+            <label>
+                <input
+                name="user-recommend"
+                value="definitely"
+                type="radio"
+                class="input-radio"
+                checked
+                /> Definitely</label>
+            <label>
+                <input
+                name="user-recommend"
+                value="maybe"
+                type="radio"
+                class="input-radio"
+                /> Maybe</label>
+            <label>
+                <input
+                name="user-recommend"
+                value="notSure"
+                type="radio"
+                class="input-radio"
+                /> Not Sure</label>
+            </div>
+        </div>
+        <div class="form-inputs">
+            <p>What do you want to see in this survey besides these questions?</p>
+        <div class="input-chose">
+            <label>
+                <input
+                name="user-opinion"
+                value="myFavColor"
+                type="checkbox"
+                class="input-checkbox"
+                /> My favourite color</label>
+            <label>
+                <input
+                name="user-opinion"
+                value="myFavFood"
+                type="checkbox"
+                class="input-checkbox"
+                /> My favourite plate of food</label>
+            <label>
+                <input
+                name="user-opinion"
+                value="myFavSport"
+                type="checkbox"
+                class="input-checkbox"
+                /> My favourite sport</label>
+            <label>
+                <input
+                name="user-opinion"
+                value="myFavCountry"
+                type="checkbox"
+                class="input-checkbox"
+                /> My favourite country</label>
+            <label>
+                <input
+                name="user-opinion"
+                value="myFavFootballPlayer"
+                type="checkbox"
+                class="input-checkbox"
+                /> My favourite football player</label>
+            <label>
+                <input
+                name="user-opinion"
+                value="myFavSoccer"
+                type="checkbox"
+                class="input-checkbox"
+                /> My favourite soccer team</label>
+            <label>
+            </div>
+        </div>
+        <div class="form-inputs">
+            <p>Any coments and sugestions?</p>
+            <textarea
+                id="comments"
+                class="input-textarea"
+                name="comment"
+                placeholder="Enter your comment here please..."
+            ></textarea>
+        </div>
+        <div class="form-inputs">
+            <button type="submit" id="submit" class="submit-button">
+                Submit
+            </button>
+        </div>
+    </form>
+</body>
+</html>
