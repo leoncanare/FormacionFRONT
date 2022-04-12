@@ -1,0 +1,280 @@
+/* font-family: 'Allerta Stencil', sans-serif; */
+/* font-family: 'Overpass', sans-serif; */
+/* font-family: 'Asap', sans-serif; */
+
+html {
+    box-sizing: border-box;
+    font-size: 65%;
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 1200px total with*/
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px total with*/
+  @media (max-width: 60em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* 460px total with*/
+  @media (max-width: 30em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
+  body {
+    font-family: "Overpass", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    display: block;
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+    font-weight: 300;
+    font-family: "Allerta Stencil", sans-serif;
+  }
+  
+  h1 {
+    font-size: 6rem;
+  }
+  
+  h2 {
+    font-size: 4rem;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+  
+  /* NAVIGATION BAR STYLES */
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: #535474;
+    font-family: "Overpass", sans-serif;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .nav-options {
+    display: flex;
+    margin-right: 2rem;
+  }
+  
+  #title-logo {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 100;
+    font-family: 'Allerta Stencil', sans-serif; 
+    color: white;
+    text-shadow: 2px 2px 10px #2d2e3f;
+    padding: 1rem 2rem 1rem 10rem;
+  }
+  
+  .nav-options a {
+    display: block;
+    font-size: 3.5rem;
+    color: white;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  
+  .nav-options a:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* WELCOME STYLES */
+  
+  .welcome-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 10px #2d2e3f;
+    letter-spacing: 0.5rem;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(62deg, #cdc96288 0%, #53547475 100%),
+      url(https://www.sapphirewebsolutions.com/wp-content/uploads/2019/09/Web-Development-Trends.jpg);
+    background-repeat: repeat-y;
+    background-size: auto;
+  }
+  
+  .welcome-sec h1,
+  h2 {
+    padding: 20px;
+    margin-top: 2rem;
+  }
+  
+  .welcome-sec p {
+    font-size: 3rem;
+    color: #535474;
+    background-color: rgba(255, 255, 255, 0.493);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.281);
+    padding: 0 20px 0 20px;
+    margin-top: 3rem;
+    text-shadow: 4px 4px 10px white;
+  }
+  
+  #separator {
+    width: 100%;
+    height: 5px;
+    background-color: #535474;
+  }
+  
+  /* PROYECTS STYLES */
+  
+  .project-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ab9a77;
+    padding: 10rem 2rem 2rem;
+  }
+  
+  .project-section h2 {
+    color: white;
+    text-shadow: 2px 2px 10px #2d2e3f;
+    background-color: #53547483;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.281);
+    letter-spacing: 0.5rem;
+  }
+  
+  .work-project {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-gap: 5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+  }
+  
+  .project {
+    background: #333841;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+  
+  .project-img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .project-name {
+    text-align: center;
+    color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .btn-space {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-space a {
+    text-align: center;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+    background-color: #535474ad;
+  }
+  
+  .btn-space a:hover {
+    background-color: rgba(255, 255, 255, 0.493);
+    color: #535474;
+  }
+  
+  /* CONTACT STILES */
+  
+  .contact-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    background-color: #ab9a77;
+    padding: 10rem 2rem 2rem;
+  }
+  
+  .contact-sec h2 {
+    color: white;
+    text-shadow: 2px 2px 10px #2d2e3f;
+    background-color: #53547483;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.281);
+    letter-spacing: 0.5rem;
+  }
+  
+  .contact-sec h3 {
+    font-weight: 100;
+    font-size: 3rem;
+    color: white;
+    padding: 0 20px 0 20px;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    text-shadow: 4px 4px 5px #535474;
+  }
+  
+  .contact-platforms {
+    font-size: 5rem;
+    color: white;
+    padding: 0 20px 0 20px;
+    margin-top: 3rem;
+    text-shadow: 4px 4px 10px #535474;
+  }
+  
+  .contact-btn {
+    padding: 5rem;
+    color: white;
+  }
+  
+  .btn:hover {
+    color: #535474;
+    text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.418);
+  }
+  
+  /* FOOTER STYLES */
+  
+  footer {
+    padding: 3rem;
+    text-align: center;
+    width: 100%;
+    background-color: #535474;
+    font-family: "Overpass", sans-serif;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  }
+  
