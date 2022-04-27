@@ -43,7 +43,12 @@
     display: flex;
   }
 
-  .col {
+  .col{
     flex-grow: 1;
-    margin-right: 3px;
+    margin-right: 10px;
+  }
+
+  input{
+    display: block;
+    margin: 5px
   }

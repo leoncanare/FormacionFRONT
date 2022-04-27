@@ -1,0 +1,22 @@
+<h3>Agregar <small> {{ nuevo.nombre }}</small> </h3>
+        <hr>
+<!-- [INFO] Componemos la estructura de nuestro form para su utilizacion abra que importar el modulo raiz  
+    -ngSubmit=> toma la info de nuetros inputs y la pasa a la funcion agragar()
+    -ngModel => se encarga de asignar el dato recogido a nuestro input en el comp.ts
+-->
+
+        <form (ngSubmit)="agregar()">
+            <input 
+                type="text" 
+                placeholder="Nombre"
+                name="nombre" 
+                [(ngModel)]="nuevo.nombre"   
+            />
+            <input 
+                type="number" 
+                placeholder="Poder"
+                name="poder" 
+                [(ngModel)]="nuevo.poder" 
+            />
+            <button type="submit" >AGREGAR</button>
+        </form>

@@ -1,20 +1,15 @@
-
-<h1>Dragon Ball Z</h1>
+<h1>DRAGON Ball Z</h1>
 <hr>
-
 <div class="row">
     <div class="col">
-        <h3>PERSONAJES</h3>
-        <hr>
-        <ul>
-            <li>Krillin - 700</li>
-            <li>Goku - 15,000</li>
-            <li>Vegeta - 8,500</li>
-        </ul>
+        <app-personajes>
+        </app-personajes>
     </div>
 
     <div class="col">
-        <h3>AGREGAR</h3>
-        <hr>
+<!-- [INFO] Datos que mostramos por defecto desde nuetro comp.main-page  -->
+        <app-agregar 
+            [dataNuevo]="nuevo" 
+        ></app-agregar>
     </div>
 </div>

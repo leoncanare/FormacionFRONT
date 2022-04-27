@@ -1,0 +1,8 @@
+<h3>PERSONAJES</h3>
+        <hr>
+        <ul>
+<!-- [INFO] El for se puede enunciar de la siguienteforma creanado la lista de personajes por cada personaje con sus propiedades.  -->
+            <li *ngFor="let personaje of personajes">
+                {{personaje.nombre}} - {{personaje.poder | number}}
+            </li>
+        </ul>
