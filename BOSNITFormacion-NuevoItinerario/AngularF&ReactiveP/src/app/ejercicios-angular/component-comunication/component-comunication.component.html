@@ -1,0 +1,17 @@
+<body>
+    <div class="container">
+        <h1 class="container__title">Component Comunication</h1>
+    </div>
+    <div class="container__parent">
+        <h2 class="container__parent_title">PARENT</h2>
+        <p class="container__parent_message">Message : <span class="container__parent_messageresponse"> {{ messageParent }} </span></p>
+        <div class="button_container">
+            <button class="button" type="button">USE SERVICE</button>
+            <button class="button" type="button">USE INPUT PROPERTY</button>
+            <button class="button" type="button">USE OBSERVABLE</button>
+        </div>
+        <div class="container__parentchild">
+            <app-cc-child (send)="reciveMessage($event)"></app-cc-child>
+        </div>
+    </div>
+</body>

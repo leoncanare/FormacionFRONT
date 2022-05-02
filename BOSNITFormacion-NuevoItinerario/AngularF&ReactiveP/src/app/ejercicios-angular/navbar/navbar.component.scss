@@ -1,0 +1,240 @@
+//font-family: 'Work Sans', sans-serif;
+//font-family: 'Ubuntu', sans-serif;
+/*   color variables */
+
+$white-text: white;
+$grey-sdw: #b3b5b9;
+$grey-navbar: rgb(226, 226, 226);
+$red-principal: #790000;
+$red-hover: #00000075;
+
+/*   border radius */
+$radius: 0.5rem;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: fixed;
+  background-color: $grey-navbar;
+  width: 100vw;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2.5rem;
+  box-shadow: 0 0 10px $grey-sdw;
+  z-index: 100;
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 3rem;
+
+    &logo {
+      list-style: none;
+      margin-right: auto;
+      
+      &name {
+        text-decoration: none;
+        color: black;
+        font-weight: 800;
+        font-family: 'Ubuntu', sans-serif;
+      }
+      
+      &ico {
+        color: $red-principal;
+        width: 2.5rem;
+        margin-left: 1rem;
+        cursor: pointer;
+
+        &:hover{
+          color: $red-hover;
+        }
+      }
+    }
+
+    &item {
+      list-style: none;
+      font-weight: bold;
+      position: relative;
+      padding: 1.5rem 1rem;
+      margin-right: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $red-principal;
+      }
+
+      &:hover ul,
+      &:focus ul {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &drop {
+        position: absolute;
+        top: 4rem;
+        left: -1rem;
+        box-shadow: 0 0 10px $grey-sdw;
+        background-color: $red-principal;
+        border-radius: $radius;
+        width: 19rem;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 200ms ease-in-out;
+        
+        a {
+            text-decoration: none;
+            color: $white-text;
+            font-size: 1rem;
+        }
+
+        li {
+          display: flex;
+          list-style: none;
+          justify-items:  center;
+          padding: 0.5rem 1rem;
+          border-radius: $radius;
+
+
+          &:hover,
+          &:focus {
+            background-color: rgba(0, 0, 0, 0.288);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:895px){
+  .nav {
+    &__list {
+      display: block;
+      flex-direction: row;
+      &logo {
+        margin-top: 1rem;
+      }
+      &item {
+        display: inline-block;
+        margin: 0;
+        margin-left: -0.5rem;
+      }
+    }
+  }
+  .drop {
+    margin-right: 3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ul {
+//     list-style: none;
+// }
+
+// .navbar{
+//     background-color: rgb(175, 175, 175);
+//     font-family: 'Work Sans', sans-serif;
+//     font-size: 2rem;
+//     padding: 1rem 0;
+//     margin: 0;
+//     display: flex;
+//     justify-content:flex-end;
+//     align-items: center;
+// }
+
+// .navbar-item{
+//     margin-right: 4rem;
+
+//     a {
+//         text-decoration: none;
+//         color: black;
+//     }
+
+//     li {
+//         padding-top: 1rem;
+//         background-color: black;
+//         border-radius: 5px;
+//         a{
+//             background-color: aqua;
+//             padding: 1rem 1rem;
+//             display: block;        
+//         }
+//         a:hover{
+//             background-color: aquamarine;
+//         }
+//     }
+//     > li {
+//         float: left;
+//     }
+//     ul {
+//         display: none;
+//         position: absolute;
+//         margin: auto;
+        
+//         li {
+//             font-size: 1rem;
+//         }
+//     }
+// }
+
+// .navbar-dropdown:hover > ul{
+//     display: block;
+    
+// }
+
+// .nav-dropdown {
+//     padding: 0 5rem 0 5rem;
+//     display: flex;
+//     align-items: flex-end;
+// }
+
+// .navbar-title{
+//     margin-right: auto;
+//     margin-left: 2rem;
+
+//     a {
+//         margin-right: 3rem;
+//     }
+// }
+
+
+

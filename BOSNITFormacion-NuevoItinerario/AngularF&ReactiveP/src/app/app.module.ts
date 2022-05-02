@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DisplayHideComponent } from './display-hide/display-hide.component';
+import { EjerciciosAngularModule } from './ejercicios-angular/ejercicios-angular.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DisplayHideComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EjerciciosAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]
