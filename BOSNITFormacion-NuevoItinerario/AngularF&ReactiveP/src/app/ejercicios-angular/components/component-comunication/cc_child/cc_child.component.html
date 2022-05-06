@@ -1,0 +1,22 @@
+<body>
+  <div class="container__parentchild">
+    <h3 class="container__parent_title">CHILD</h3>
+    <p class="container__parent_message">
+      Message :
+      <span class="container__parent_messageresponse">
+        {{ messageChild }}
+      </span>
+    </p>
+    <div class="button_container">
+      <button class="button" type="button" (click)="childService()">
+        USE SERVICE
+      </button>
+      <button class="button" type="button" (click)="outPutParent()">
+        USE OUTPUT EVENT
+      </button>
+      <button class="button" type="button" (click)="childObs()">
+        USE OBSERVABLE
+      </button>
+    </div>
+  </div>
+</body>

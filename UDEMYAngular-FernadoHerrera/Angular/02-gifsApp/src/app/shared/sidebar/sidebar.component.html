@@ -1,0 +1,16 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+  <h3 class="text-light">Gifs-App</h3>
+  <hr class="text-light" />
+
+  <div class="list-group list-reset">
+    <!-- [INFO] Hacemos un for para que liste cada item del historial y genere un <a> por cada uno de ellos. -->
+    <!-- [INFO] Pipe | manipulan o trasforman contenido en el template -->
+    <a
+      *ngFor="let item of historial"
+      (click)="buscar( item )"
+      href="#"
+      class="list-group-item list-group-item-action"
+      >{{ item | titlecase }}
+    </a>
+  </div>
+</div>

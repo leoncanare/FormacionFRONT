@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EjerciciosAngularModule } from './ejercicios-angular/ejercicios-angular.module';
+import { EjerciciosAngularModule } from './ejercicios-angular/modules/ejercicios-angular.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { EjerciciosAngularModule } from './ejercicios-angular/ejercicios-angular
   imports: [
     BrowserModule,
     AppRoutingModule,
-    EjerciciosAngularModule
+    EjerciciosAngularModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

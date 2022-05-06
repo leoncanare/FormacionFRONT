@@ -1,0 +1,28 @@
+<h2>Por País</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- [INFO] (1)Este onEnter es el evento que se transmite desde nuestro modulo input y se recoge en nuestra funcion buscar y esta se activa.    (2)Con onDebounce recogemos campo marcado por teclado para establecer una funcion sugerencias con dicho evento recogido.                    (3) Establecemos el placeholder de la siguiente manera emitiendo este y recogiendolo con un input en el component pais-input -->
+        <app-pais-input
+        (onEnter)="buscar( $event )"
+        (onDebounce)="sugerencias( $event )"
+        placeholder="Buscar pais..."
+        ></app-pais-input>
+    </div>
+</div>
+<hr>
+<!-- [INFO] Si hubiera un error, el valor de hay error pasaria a true por lo que mostraria este div. -->
+<div *ngIf="hayError"
+     class="alert alert-danger">
+    No se encontró nada con el país: {{termino}}.
+</div>
+<!-- [INFO] Si nuestro array paisBusqueda es > 0, nuestra tabla nos e mostrará,solo si hay aunque sea 1 pais en el array. -->
+<div *ngIf="paisesBusqueda.length > 0" class="row">
+    <div class="col">
+        <!-- [INFO] En este caso emitimos el campo paisesBusqueda para que se recoja en el cmoponente tabla como paisesBusquedaTabla. -->
+        <app-pais-tabla
+        [paisesBusquedaTabla]="paisesBusqueda"
+        ></app-pais-tabla>
+    </div>
+</div>

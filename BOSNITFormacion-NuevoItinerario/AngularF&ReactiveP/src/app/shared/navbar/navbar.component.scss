@@ -1,0 +1,254 @@
+//font-family: 'Work Sans', sans-serif;
+//font-family: 'Ubuntu', sans-serif;
+
+/*   color variables */
+$white-text: white;
+$grey-sdw: #b3b5b9;
+$grey-hover: #00000075;
+$black-sdw: #00000046;
+$grey-navbar: rgba(226, 226, 226, 0.781);
+$grey-navbar2: rgba(128, 128, 128, 0.212);
+$red-principal: #a43b3b;
+$red-principal2: #a43b3b;
+$red-hover: #790000ad;
+$blue-text: #18323d;
+$blue-text-hover: #18323d77;
+$blue-text-hover-drop: #18323d31;
+
+/*   border radius */
+$radius: 0.5rem;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: fixed;
+  background-color: $grey-navbar;
+  width: 100vw;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2.5rem;
+  box-shadow: 0 0 10px $black-sdw;
+  z-index: 100;
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 3rem;
+
+    &logo {
+      list-style: none;
+      margin-right: auto;
+      
+      &name {
+        text-decoration: none;
+        color: $blue-text;
+        font-weight: 800;
+        font-family: 'Ubuntu', sans-serif;
+      }
+      
+      &ico {
+        color: $red-principal;
+        width: 2.5rem;
+        margin-left: 1rem;
+        cursor: pointer;
+
+        &:hover{
+          color: $grey-hover;
+        }
+      }
+    }
+
+    &item {
+      list-style: none;
+      color: $blue-text;
+      font-weight: bold;
+      position: relative;
+      padding: 1.5rem 1rem;
+      margin-right: 3rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $red-principal;
+        transform: scale(1.1);
+      }
+
+      &:hover ul,
+      &:focus ul {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &drop {
+        position: absolute;
+        top: 4rem;
+        left: -1rem;
+        box-shadow: 0 0 10px $black-sdw;
+        background-color: $red-principal;
+        border-radius: $radius;
+        width: 18.5rem;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 200ms ease-in-out;
+        
+        hr {
+          border: 1px solid $blue-text-hover-drop;
+          width: 80%;
+          margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: $white-text;
+            font-size: 1rem;
+        }
+
+        li {
+          display: flex;
+          list-style: none;
+          justify-items:  center;
+          padding: 0.5rem 1rem;
+          border-radius: $radius;
+
+          &:hover,
+          &:focus {
+            background-color: $blue-text-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:895px){
+  .nav {
+    &__list {
+      display: block;
+      flex-direction: row;
+      &logo {
+        margin-top: 1rem;
+      }
+      &item {
+        display: inline-block;
+        margin: 0;
+        margin-left: -0.5rem;
+      }
+    }
+  }
+  .drop {
+    margin-right: 3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ul {
+//     list-style: none;
+// }
+
+// .navbar{
+//     background-color: rgb(175, 175, 175);
+//     font-family: 'Work Sans', sans-serif;
+//     font-size: 2rem;
+//     padding: 1rem 0;
+//     margin: 0;
+//     display: flex;
+//     justify-content:flex-end;
+//     align-items: center;
+// }
+
+// .navbar-item{
+//     margin-right: 4rem;
+
+//     a {
+//         text-decoration: none;
+//         color: black;
+//     }
+
+//     li {
+//         padding-top: 1rem;
+//         background-color: black;
+//         border-radius: 5px;
+//         a{
+//             background-color: aqua;
+//             padding: 1rem 1rem;
+//             display: block;        
+//         }
+//         a:hover{
+//             background-color: aquamarine;
+//         }
+//     }
+//     > li {
+//         float: left;
+//     }
+//     ul {
+//         display: none;
+//         position: absolute;
+//         margin: auto;
+        
+//         li {
+//             font-size: 1rem;
+//         }
+//     }
+// }
+
+// .navbar-dropdown:hover > ul{
+//     display: block;
+    
+// }
+
+// .nav-dropdown {
+//     padding: 0 5rem 0 5rem;
+//     display: flex;
+//     align-items: flex-end;
+// }
+
+// .navbar-title{
+//     margin-right: auto;
+//     margin-left: 2rem;
+
+//     a {
+//         margin-right: 3rem;
+//     }
+// }
+
+
+

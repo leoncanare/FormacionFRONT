@@ -1,0 +1,15 @@
+<body class="background-img">
+  <div class="titlecontainer">
+    <h1 class="titlecontainer__title animate__animated animate__flipInX">Display and Hide</h1>
+  </div>
+  <button class="button animate__animated animate__fadeIn" type="button" (click)="displayAndHide()">
+    {{ message_btn }}<i class="fa-solid fa-computer-mouse"></i>
+  </button>
+
+  <div class="item__display animate__animated animate__jackInTheBox" *ngIf="display">
+    <img
+      src="https://pngimg.com/uploads/welcome/welcome_PNG81.png"
+      alt="welcome"
+    />
+  </div>
+</body>

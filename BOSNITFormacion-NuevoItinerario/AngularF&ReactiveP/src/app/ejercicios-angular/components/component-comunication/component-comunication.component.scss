@@ -1,0 +1,129 @@
+//font-family: 'Work Sans', sans-serif;
+//font-family: 'Ubuntu', sans-serif;
+
+/*   color variables */
+$white-text: white;
+$grey-sdw: #b3b5b9;
+$grey-sdwP: #dde2e9;
+$red-sdwC: #a43b3b85;
+$grey-navbar: rgba(128, 128, 128, 0.212);
+$red-principal: #a43b3b;
+$red-principal2: #a43b3b;
+$red-hover: #a43b3b;
+$blue-text: #18323d;
+
+body {
+  padding-top: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background-img {
+  background-image: url(../../../../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: auto;
+  clip-path: inset(9% 0 0 0);
+}
+
+.container {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  &__title {
+    text-transform: uppercase;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2.5rem;
+    color: $red-principal2;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.438);
+    letter-spacing: 0.3rem;
+    margin-bottom: 3rem;
+  }
+  &__description {
+    margin-top: 3rem;
+    padding: 0 20% 0 20%;
+    font-size: 1.5rem;
+  }
+  &__parent {
+    font-family: "Work Sans", sans-serif;
+    border: 4px solid $blue-text;
+    border-radius: 0.5rem;
+    background-color: $grey-sdwP;
+    padding: 1rem;
+    width: 70%;
+    &_message {
+      text-align: center;
+      text-transform: uppercase;
+      width: fit-content;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      margin: auto;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: $white-text;
+      border-radius: 0.5rem;
+      &response {
+        color: #790000;
+        text-transform: capitalize;
+      }
+    }
+    &child {
+      border: 3px solid $blue-text;
+      border-radius: 0.5rem;
+      background-color: $red-sdwC;
+      padding: 1rem;
+    }
+  }
+}
+
+// STYLE BOTON
+.button {
+  position: relative;
+  background-color: $red-principal;
+  border-radius: 0.4rem;
+  margin: 1rem;
+  font-size: 15px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  color: white;
+  padding: 0.8em 1.8em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  &:hover {
+    transition-duration: 0.1s;
+    background-color: $blue-text;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 0.4rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 10px $red-principal;
+  }
+  &:active:after {
+    box-shadow: 0 0 0 0 $red-principal;
+    position: absolute;
+    border-radius: 0.4rem;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+  &_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:active {
+    top: 1px;
+  }
+}
