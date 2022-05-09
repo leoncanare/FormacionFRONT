@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
+import { pipe, tap } from 'rxjs';
 import { Pais } from '../../interfaces/pais.interface';
 import { PaisService } from '../../services/pais.service';
 
 @Component({
   selector: 'app-por-pais',
   templateUrl: './por-pais.component.html',
-  styles: [
+  styles: [`
+    li {
+      cursor: pointer;
+    }
+  `
   ]
 })
 export class PorPaisComponent {
@@ -14,10 +19,13 @@ export class PorPaisComponent {
   hayError: boolean = false;
   paisesBusqueda: Pais[] = [];
 
+  paisesSugeridos: Pais[] = [];
+  mostrarSugerencias: boolean = false;
+
   constructor( private paisService: PaisService) { }
   
   buscar( terminoInput: string) {
-
+    this.mostrarSugerencias = false;
     this.hayError = false;
     this.termino = terminoInput;
     //console.log(this.termino);
@@ -33,6 +41,15 @@ export class PorPaisComponent {
 
   sugerencias( termino: string) {
     this.hayError = false;
+    this.termino = termino;
+    this.mostrarSugerencias = true;
+
+    this.paisService.buscarPais( termino )
+      .subscribe( paises => this.paisesSugeridos = paises.splice(0,5));
+  }
+
+  buscarSugerido(termino: string){
+    this.buscar(termino);
   }
 
 }

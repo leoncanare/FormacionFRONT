@@ -1,1 +1,51 @@
-<p>ver-pais works!</p>
+<div *ngIf="!pais; else divPais" 
+    class="alert alert-info">
+    Espere por favor...
+</div>
+
+<ng-template #divPais>
+    <div class="row animate__animated animate__fadeIn animate__faster">
+        <div class="col-12">
+            <h1>Pais: <small>{{ pais.name.common }}</small></h1>
+        </div>
+    </div>
+
+    <div class="row animate__animated animate__fadeIn animate__faster">
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <img [src]="pais.flags.png" [alt]="pais.flag" class="img-tumbnail">
+        </div>
+        <div class="sol">
+            <h3>Información</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Población: </strong> {{pais.population | number}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Código Area: </strong> {{pais.area | number}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Nombre Oficial: </strong> {{pais.name.official}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Capital: </strong> {{pais.capital}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h3>Traducciones</h3>
+    <div class="row">
+        <div class="col">
+            <span class="badge bg-primary mr-1">{{ pais.translations['jpn']['official'] }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['fra']['official'] }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['spa']['official'] }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['per']['official'] }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['pol']['official'] }}</span>
+            <span class="badge bg-primary mr-1">{{ pais.translations['ces']['official'] }}</span>
+        </div>
+    </div>
+    <!-- <pre class="mt-5">
+        {{pais | json}}
+    </pre> -->
+</ng-template>
+
