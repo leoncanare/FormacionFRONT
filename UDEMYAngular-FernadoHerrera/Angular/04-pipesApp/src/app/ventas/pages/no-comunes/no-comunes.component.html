@@ -1,0 +1,82 @@
+<div class="text-layout">
+  <h1>Pipes no comunes</h1>
+  <p>Pipes incluídos en Angular Usualmente en el CommonModule.</p>
+</div>
+<div class="grid">
+  <div class="col-12 md:col-6">
+    <!-- [INFO] Efecto de burbuja del fieldset importado en app.component.ts -->
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+      <p>
+        Saludos {{ nombre }}, es un placer
+        {{ genero | i18nSelect: invitacionMapa }}
+        a trabajar en nuestras oficinas.
+      </p>
+      <button
+        pButton
+        type="button"
+        class="p-button-success"
+        label="Crear Cliente"
+        icon="pi pi-user-plus"
+        (click)="cambiarCliente()"
+      ></button>
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p>Actualmente {{ clientes.length | i18nPlural: clientesMapa }}</p>
+      <button
+        pButton
+        type="button"
+        class="p-button-danger"
+        label="Borrar Cliente"
+        icon="pi pi-trash"
+        (click)="borrarCliente()"
+      ></button>
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
+      <b>Original</b>
+      <pre>{{ clientes }}</pre>
+      <!-- FORMA SIN PIPE <pre *ngFor="let cliente of clientes">{{ cliente }}</pre> -->
+      <b>Original ligado al borrado</b>
+      <pre>{{ clientes | slice: 0 }}</pre>
+      <b>slice:0:2</b>
+      <pre>{{ clientes | slice: 0:2 }}</pre>
+      <b>slice:1:2</b>
+      <pre>{{ clientes | slice: 1:2 }}</pre>
+      <b>slice:1:3</b>
+      <pre>{{ clientes | slice: 1:3 }}</pre>
+      <b>slice:0:5</b>
+      <pre>{{ nombre | slice: 0:3 }}</pre>
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Jason Pipe" [toggleable]="true">
+      <pre
+        >{{ heroes | json }}
+        </pre
+      >
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      <!-- [INFO] Este pipe desgrana un objeto y lo representa en cuanto a su key:valor -->
+      <ul>
+        <li *ngFor="let item of persona | keyvalue">
+          <b>{{ item.key | uppercase }} :</b> {{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <!-- [INFO] Este pipe se suscribe de una manera automatica a un observable ya definido -->
+      <pre>{{ miObservable | async }}</pre>
+      <hr />
+      <!-- [INFO] Para condicionar que antes de que la promeas se conclulla muestre otro mensaje como ... Cargando colocamos un ngIf negando la misma.  -->
+      <pre *ngIf="!(valorPromesa | async)">Resolviendo promesa...</pre>
+      <pre>{{ valorPromesa | async }}</pre>
+    </p-fieldset>
+  </div>
+</div>
