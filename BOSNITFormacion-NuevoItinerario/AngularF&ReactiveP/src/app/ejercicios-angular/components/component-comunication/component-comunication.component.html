@@ -1,30 +1,34 @@
 <body class="background-img">
   <div class="container">
-    <h1 class="container__title animate__animated animate__flipInX">Component Comunication</h1>
+    <h1 class="container__title animate__animated animate__flipInX">
+      Component Comunication
+    </h1>
   </div>
   <div class="container__parent animate__animated animate__fadeIn">
     <h2 class="container__parent_title">PARENT</h2>
     <p class="container__parent_message">
       Message :
       <span class="container__parent_messageresponse">
-        {{ messageParent }}
+        {{ messageFromChild }}
       </span>
     </p>
     <div class="button_container">
-      <button class="button" type="button" (click)="parentService()">
+      <button class="button" type="button" (click)="sendToChildService()">
         USE SERVICE
       </button>
-      <button class="button" type="button" (click)="sendInput()">
+      <button class="button" type="button" (click)="sendToChildInput()">
         USE INPUT PROPERTY
       </button>
-      <button class="button" type="button" (click)="parentObs()">
+      <button class="button" type="button" (click)="sendObservableToChild()">
         USE OBSERVABLE
       </button>
     </div>
     <div class="container__parentchild">
       <app-cc-child
-        [messageChild]="sendMessageChild"
-        (sendToParent)="reciveMessage($event)"
+      [messageFromParent]="sendInputToChild"
+      (sendToParent)="reciveOutputFromChild($event)"
+      [messageFromParentObs$]="sendObsToChild.asObservable()"
+        (observableToParent)="receiveObservableFromChild($event)"
       ></app-cc-child>
     </div>
   </div>

@@ -80,3 +80,13 @@ $blue-text: #18323d;
     top: 1px;
   }
 }
+
+@media only screen and (max-width:800px){
+  .button {
+    &_container {
+      display:grid;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

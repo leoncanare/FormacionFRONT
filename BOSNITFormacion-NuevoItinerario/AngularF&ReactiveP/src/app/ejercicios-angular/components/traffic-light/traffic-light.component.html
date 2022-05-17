@@ -1,0 +1,46 @@
+<body class="background-img">
+  <div class="cont">
+    <h1 class="cont__title animate__animated animate__flipInX">
+      Traffic Light
+    </h1>
+  </div>
+  <div class="tL animate__animated animate__fadeIn">
+    <ul class="tL__box">
+      <li class="tL__boxlight">
+        <div class="tL__boxlight_circle">
+          <div *ngIf="display && color ==='green'" class="tL__boxlight_circlelight gre animate__animated animate__pulse animate__infinite	infinite"></div>
+        </div>
+      </li>
+      <li class="tL__boxlight">
+        <div class="tL__boxlight_circle">
+          <div *ngIf="display && color === 'yellow'" class="tL__boxlight_circlelight yel animate__animated animate__pulse animate__infinite infinite"></div>
+        </div>
+      </li>
+      <li class="tL__boxlight">
+        <div class="tL__boxlight_circle">
+          <div *ngIf="display && color === 'red'" class="tL__boxlight_circlelight red animate__animated animate__pulse animate__infinite infinite"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="controller animate__animated animate__flipInX">
+    <div>
+      <select  class="controller_color" name="selectColor" 
+              (change)="changeColor($event)">
+        <option value="">SELCT COLOR</option>
+        <option value="green">GREEN</option>
+        <option value="yellow">YELLOW</option>
+        <option value="red">RED</option>
+      </select>
+    </div>
+    <div class="controller_box">
+      <label  class="controller_box_switch">
+        <input (click)="powerButon()" type="checkbox" name="">
+        <span>
+          <i class="fa-solid fa-lightbulb on"></i>
+          <i class="fa-solid fa-power-off off"></i>
+        </span>
+      </label>
+    </div>
+  </div>
+</body>

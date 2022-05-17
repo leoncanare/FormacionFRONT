@@ -4,17 +4,17 @@
     <p class="container__parent_message">
       Message :
       <span class="container__parent_messageresponse">
-        {{ messageChild }}
+        {{ messageFromParent }}
       </span>
     </p>
     <div class="button_container">
-      <button class="button" type="button" (click)="childService()">
+      <button class="button" type="button" (click)="sendToParentService()">
         USE SERVICE
       </button>
-      <button class="button" type="button" (click)="outPutParent()">
+      <button class="button" type="button" (click)="sendToParentOutPut()">
         USE OUTPUT EVENT
       </button>
-      <button class="button" type="button" (click)="childObs()">
+      <button class="button" type="button" (click)="sendObservableToParent()">
         USE OBSERVABLE
       </button>
     </div>

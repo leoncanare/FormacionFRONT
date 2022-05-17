@@ -1,0 +1,20 @@
+<h1>Gráfico Dona petición Http</h1>
+<hr>
+<div *ngIf="doughnutChartData.datasets[0].data.length === 0; else divGrafica"
+    class="alert alert-info">
+    Cargando datos...
+</div>
+
+<div class="row">
+    <ng-template #divGrafica>
+        <div class="col">
+            <div style="display: block">
+                <canvas baseChart 
+                        [data]="doughnutChartData" 
+                        [type]="doughnutChartType">
+                </canvas>
+              </div>
+        </div>
+    </ng-template>
+    
+</div>

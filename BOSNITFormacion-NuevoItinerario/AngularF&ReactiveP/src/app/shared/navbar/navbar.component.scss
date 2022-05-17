@@ -90,7 +90,7 @@ $radius: 0.5rem;
         box-shadow: 0 0 10px $black-sdw;
         background-color: $red-principal;
         border-radius: $radius;
-        width: 18.5rem;
+        width: 18.7rem;
         padding: 1rem;
         margin-top: 0.5rem;
         display: flex;
@@ -135,12 +135,12 @@ $radius: 0.5rem;
       display: block;
       flex-direction: row;
       &logo {
+        display: flex;
+        justify-content: center;
         margin-top: 1rem;
       }
       &item {
-        display: inline-block;
-        margin: 0;
-        margin-left: -0.5rem;
+        display: inline-flex;
       }
     }
   }

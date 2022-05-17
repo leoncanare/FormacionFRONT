@@ -5,49 +5,23 @@ import { BehaviorSubject, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class CompComService {
-  
-  //MODO RESUMIDO:
 
-  // private _serviceMessage$ = new BehaviorSubject('menssage');
+  private _serviceMessageFromParentSubject = new BehaviorSubject('');
+  private _serviceMessageFromChildSubject = new BehaviorSubject('');
 
-  // get ServiceMessage$(): BehaviorSubject<string> {
-  //   return this._serviceMessage$;
-  // }
-
-  // set ServiceMessage$(value: string) {
-  //   this._serviceMessage$.next(value);
-  // }
-
-  // useObservable( message: string): Observable<string> {
-  //   return this.get( _servoceMesage$ );
-  // }
-
-  //SERVICIO
-  parentMsgServ: string = 'Usando Servicio Parent';
-  childMsgServ: string = 'Usando Servicio Child';
-
-  sendToParent() {
-    return this.childMsgServ;
+  getServiceMessageP(): BehaviorSubject<string> {
+    return this._serviceMessageFromParentSubject;
   }
 
-  sendToChild() {
-    return this.parentMsgServ;
+  setServiceMessageP(value: string) {
+    this._serviceMessageFromParentSubject.next(value);
   }
 
-  //OVSERVABLE
-  private ParentMessageSource = new Subject<string>();
-
-  $ParentMessage = this.ParentMessageSource.asObservable();
-
-  ParentMessage(messageP: string) {
-    this.ParentMessageSource.next(messageP);
+  getServiceMessageC(): BehaviorSubject<string> {
+    return this._serviceMessageFromChildSubject;
   }
 
-  private ChildMessageSource = new Subject<string>();
-
-  $ChildMessage = this.ChildMessageSource.asObservable();
-
-  ChildMessage(messageC: string) {
-    this.ChildMessageSource.next(messageC);
+  setServiceMessageC(value: string) {
+    this._serviceMessageFromChildSubject.next(value);
   }
 }

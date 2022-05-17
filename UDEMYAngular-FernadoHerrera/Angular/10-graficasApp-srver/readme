@@ -1,0 +1,1 @@
+[INFO] Levantar bd -> json-server --watch db.json

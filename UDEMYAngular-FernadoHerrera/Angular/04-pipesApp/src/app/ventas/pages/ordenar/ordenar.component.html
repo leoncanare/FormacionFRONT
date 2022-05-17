@@ -9,7 +9,7 @@
     <button
       pButton
       type="button"
-      class="p-button"
+      class="p-button-help"
       iconPos="right"
       label="Toggle Mayus"
       icon="pi pi-caret-up"
@@ -18,18 +18,20 @@
     ></button>
     <button
       pButton
-      icon="pi pi-sort"
+      icon="pi pi-sort-alpha-down"
       iconPos="right"
       label="Por nombre"
       style="margin-right: 1rem"
+      (click)="cambiarOrden('nombre')"
     ></button>
     <button
       pButton
-      icon="pi pi-sort"
+      icon="pi pi-cloud"
       iconPos="right"
-      label="Valores"
+      label="Vuela"
       class="p-button-success"
       style="margin-right: 1rem"
+      (click)="cambiarOrden('vuela')"
     ></button>
     <button
       pButton
@@ -38,29 +40,56 @@
       label="Por Color"
       class="p-button-info"
       style="margin-right: 1rem"
+      (click)="cambiarOrden('color')"
     ></button>
   </div>
 </p-toolbar>
 
 <div class="grid">
-    <div class="col" style="margin-top:2rem">
-        <p-table [value]=[]>
-            <ng-template pTemplate="header">
-                <tr>
-                    <th>Vin</th>
-                    <th>Year</th>
-                    <th>Brand</th>
-                    <th>Color</th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-car>
-                <tr>
-                    <td>{{car.vin}}</td>
-                    <td>{{car.year}}</td>
-                    <td>{{car.brand}}</td>
-                    <td>{{car.color}}</td>
-                </tr>
-            </ng-template>
-        </p-table>
-    </div>
+  <div class="col" style="margin-top: 2rem">
+    <p-table [value]="heroes | ordenar: ordenarPor">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Nombre</th>
+          <th>Vuela</th>
+          <th>Color</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-heroe>
+        <tr>
+          <td>{{ heroe.nombre }}</td>
+          <td>{{ heroe.vuela | vuela | titlecase }}</td>
+          <td>{{ heroe.color }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="col" style="margin-top: 2rem">
+    <!-- [INFO] Al insertar la tabla que auto ordena usa el mismo Array por lo que usamos slice para psarle una copia y que no mute y cambien ambos. -->
+    <p-table [value]="heroes | slice: 0">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="nombre">
+            Nombre <p-sortIcon field="nombre"></p-sortIcon>
+          </th>
+          <th pSortableColumn="vuela">
+            Vuela <p-sortIcon field="vuela"></p-sortIcon>
+          </th>
+          <th pSortableColumn="color">
+            Color <p-sortIcon field="color"></p-sortIcon>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-heroe>
+        <tr>
+          <td>{{ heroe.nombre }}</td>
+          <td>{{ heroe.vuela | vuela | titlecase }}</td>
+          <td>{{ heroe.color }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
 </div>
