@@ -10,7 +10,7 @@ import { CompComService } from 'src/app/ejercicios-angular/services/compCom.serv
 })
 export class ComponentComunicationComponent implements OnInit {
   messageFromChild!: string;
-  sendInputToChild!: string;
+  sendInputToChild!: String;
   sendObsToChild = new Subject();
 
   constructor(private _compComService: CompComService) {}
@@ -27,7 +27,7 @@ export class ComponentComunicationComponent implements OnInit {
 
   //Input Button
   sendToChildInput() {
-    this.sendInputToChild = 'Usando Input';
+    this.sendInputToChild = new String('Usando Input');
   }
 
   //Output RECIVE:

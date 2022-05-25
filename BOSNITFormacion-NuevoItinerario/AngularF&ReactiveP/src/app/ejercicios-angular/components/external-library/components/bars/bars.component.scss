@@ -1,0 +1,31 @@
+//font-family: 'Work Sans', sans-serif;
+//font-family: 'Ubuntu', sans-serif;
+
+/*   color variables */
+$white-text: white;
+$grey-sdw: #b3b5b9;
+$grey-sdwP: #dde2e9;
+$red-sdwC: #a43b3b85;
+$grey-navbar: rgba(128, 128, 128, 0.212);
+$red-principal: #a43b3b;
+$red-principal2: #a43b3b;
+$red-hover: #a43b3b;
+$blue-text: #18323d;
+
+.chartBars {
+  width: 800px;
+  height: 400px;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding-left: 6.5rem;
+  .logo {
+    width: 3rem;
+    padding: 0.3rem;
+    border-radius: 10%;
+  }
+}

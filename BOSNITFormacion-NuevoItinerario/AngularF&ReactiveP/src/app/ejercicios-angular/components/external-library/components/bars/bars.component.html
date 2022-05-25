@@ -1,0 +1,14 @@
+<div class="chartBars">
+  <canvas
+    baseChart
+    [data]="barChartData"
+    [options]="barChartOptions"
+    [type]="barChartType"
+  >
+  </canvas>
+</div>
+<div class="legend">
+  <div *ngFor="let coin of coins; let i = index">
+    <img [src]="coin.image" [alt]="coin.image" class="logo" />
+  </div>
+</div>

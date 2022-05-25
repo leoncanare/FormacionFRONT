@@ -13,7 +13,7 @@ export class CcChildComponent implements OnInit {
 
   //Input RECIVE:
   @Input()
-  messageFromParent!: string;
+  messageFromParent!: String;
 
   //Output to Parent:
   @Output()

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { CcChildComponent } from '../components/component-comunication/cc_child/cc_child.component';
 
 import { MainPageComponent } from '../pages/home/main-page.component';
@@ -9,6 +8,8 @@ import { ComponentComunicationComponent } from '../components/component-comunica
 import { EjerciciosAngularRoutingModule } from './ejercicios-angular-routing.module';
 import { TrafficLightComponent } from '../components/traffic-light/traffic-light.component';
 import { ExternalLibraryComponent } from '../components/external-library/external-library.component';
+import { GraphicsModule } from '../components/external-library/graphics.module';
+
 
 @NgModule({
   declarations: [
@@ -17,14 +18,15 @@ import { ExternalLibraryComponent } from '../components/external-library/externa
     ComponentComunicationComponent,
     TrafficLightComponent,
     CcChildComponent,
-    ExternalLibraryComponent
+    ExternalLibraryComponent,
   ],
   imports: [
     CommonModule,
-    EjerciciosAngularRoutingModule
+    EjerciciosAngularRoutingModule,
+    GraphicsModule
   ],
   exports: [
-
+    
   ]
 })
 export class EjerciciosAngularModule { }

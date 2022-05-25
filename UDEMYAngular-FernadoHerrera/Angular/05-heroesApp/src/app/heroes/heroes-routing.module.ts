@@ -11,7 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   { path: '' , component: HomeComponent,children:[
     { path: 'listado' ,component: ListadoComponent},
-    { path: 'agrgar' ,component: AgregarComponent},
+    { path: 'agregar' ,component: AgregarComponent},
     { path: 'editar/:id' ,component: AgregarComponent},
     { path: 'buscar' ,component: BuscarComponent},
     { path: ':id' ,component: HeroeComponent},

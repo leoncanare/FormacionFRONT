@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -17,7 +18,8 @@ import { EjerciciosAngularModule } from './ejercicios-angular/modules/ejercicios
     BrowserModule,
     AppRoutingModule,
     EjerciciosAngularModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
