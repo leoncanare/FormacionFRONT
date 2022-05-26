@@ -1,1 +1,82 @@
-<p>switches works!</p>
+<h2>Reactive: Switches</h2>
+<hr />
+
+<form [formGroup]="myForm" (ngSubmit)="guardar()">
+  <!-- Radio -->
+  <div class="row mb3">
+    <label class="sol-sm-3 col-form-label">Genero:</label>
+    <div class="col-sm-9">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          value="M"
+          formControlName="genero"
+          id="radioMaculino"
+        />
+        <label class="form-check-label" for="radioMaculino"> Masculino </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          value="F"
+          formControlName="genero"
+          id="radioFemenino"
+        />
+        <label class="form-check-label" for="radioFemenino"> Femenino </label>
+      </div>
+    </div>
+  </div>
+  <!-- Radio Switch-->
+  <div class="row mb3">
+    <label class="sol-sm-3 col-form-label">Notificaciones:</label>
+    <div class="col-sm-9">
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          formControlName="notificaciones"
+          id="flexSwitchCheckChecked"
+        />
+        <label class="form-check-label" for="flexSwitchCheckChecked"
+          >Recibir notificaciones</label
+        >
+      </div>
+    </div>
+  </div>
+  <!-- CheckBox-->
+  <div class="row mb3">
+    <label class="sol-sm-3 col-form-label">Terminos y condiciones</label>
+    <div class="col-sm-9">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          formControlName="condiciones"
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Acepto los terminos y condiciones.
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- Boton Submit -->
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary float-end mt-3" type="submit">
+        Guardar
+      </button>
+    </div>
+  </div>
+</form>
+<h5>Valor Formulario</h5>
+<pre>{{ myForm.value | json }}</pre>
+<br />
+<h5>Persona</h5>
+<pre>{{ persona | json }}</pre>
+<br />
+<h5>Valido</h5>
+<pre>{{ myForm.valid }}</pre>

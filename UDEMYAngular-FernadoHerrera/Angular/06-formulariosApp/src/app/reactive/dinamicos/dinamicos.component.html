@@ -1,1 +1,82 @@
-<p>dinamicos works!</p>
+<h2>Reactive: Dinámicos</h2>
+<hr />
+<form (ngSubmit)="guardar()" autocomplete="off" [formGroup]="myForm">
+  <!-- Nombre -->
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Nombre</label>
+    <div class="col-sm-9">
+      <input
+        class="form-control"
+        type="text"
+        formControlName="nombre"
+        placeholder="Nombre de la persona"
+      />
+      <span class="form-text text-danger" 
+            *ngIf="campoNoValido('nombre')">
+        Este campo es obligatorio.
+      </span>
+    </div>
+  </div>
+  <!-- Agregar -->
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Agregar</label>
+    <div class="col-sm-9">
+      <div class="input-group">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Agregar favorito"
+          [formControl]="nuevoFavorito"
+          (keyup.enter)="agregar()"
+          name="nuevojuego"
+        />
+        <button
+          class="btn btn-outline-primary"
+          type="button"
+          (click)="agregar()"
+        >
+          Agregar
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Lista -->
+  <div class="mb-3 row">
+    <label class="col-sm-3 col-form-label">Favoritos</label>
+    <div class="col-sm-9" formArrayName="favoritos">
+      <div
+        class="input-group mb-2"
+        *ngFor="let favorito of favoritosArr.controls; let i = index"
+      >
+        <input class="form-control" [formControlName]="i" />
+        <button
+          class="btn btn-outline-danger"
+          type="button"
+          (click)="eliminar(i)"
+        >
+          Eliminar
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <button
+        type="submit"
+        class="btn btn-primary float-end"
+        (click)="guardar()"
+      >
+        Guardar
+      </button>
+    </div>
+  </div>
+</form>
+
+<span>Valid</span>
+<pre>{{ myForm.valid }}</pre>
+<span>Valid</span>
+<pre>{{ myForm.value | json }}</pre>
+<span>Agregar</span>
+<pre>{{ nuevoFavorito.valid }}</pre>
+<span>Agregar</span>
+<pre>{{ nuevoFavorito.value }}</pre>
