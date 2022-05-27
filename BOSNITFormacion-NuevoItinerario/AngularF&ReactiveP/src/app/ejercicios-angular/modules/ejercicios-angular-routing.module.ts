@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MainPageComponent } from '../pages/home/main-page.component';
-import { DisplayHideComponent } from '../components/display-hide/display-hide.component';
-import { ComponentComunicationComponent } from '../components/component-comunication/component-comunication.component';
-import { TrafficLightComponent } from '../components/traffic-light/traffic-light.component';
-import { ExternalLibraryComponent } from '../components/external-library/external-library.component';
+import { DisplayHideComponent } from '../pages/display-hide/display-hide.component';
+import { ComponentComunicationComponent } from '../pages/component-comunication/component-comunication.component';
+import { TrafficLightComponent } from '../pages/traffic-light/traffic-light.component';
+import { ExternalLibraryComponent } from '../pages/external-library/external-library.component';
+import { CrudComponent } from '../pages/crud/crud.component';
 
 //[INFO] Aqui generamnos la variable que alverga todas las rutas hijas de mainPage que exportaremos a el app-routing principal fuera de ejercicios-angular.
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
       },
       { path: 'trafficLight', component: TrafficLightComponent },
       { path: 'externalLibrary', component: ExternalLibraryComponent },
+      { path: 'crud', component: CrudComponent },
       { path: '', component: MainPageComponent, pathMatch: 'full' },
       //[INFO] Con su ruta por defecto:
       //(2)->  {path: '**', redirectTo: ''}

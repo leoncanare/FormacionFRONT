@@ -1,0 +1,43 @@
+//font-family: 'Work Sans', sans-serif;
+//font-family: 'Ubuntu', sans-serif;
+
+/*   color variables */
+$white-text: white;
+$grey-sdw: #b3b5b9;
+$grey-sdwP: #dde2e9;
+$red-sdwC: #a43b3b85;
+$grey-navbar: rgba(128, 128, 128, 0.212);
+$red-principal: #a43b3b;
+$red-principal2: #a43b3b;
+$red-hover: #a43b3b;
+$blue-text: #18323d;
+
+body {
+  padding-top: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background-img {
+  background-image: url(../../../../assets/img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: auto;
+  clip-path: inset(9% 0 0 0);
+}
+
+.container {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  &__title {
+    text-transform: uppercase;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2.5rem;
+    color: $red-principal2;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.438);
+    letter-spacing: 0.3rem;
+    margin-bottom: 3rem;
+  }
+}

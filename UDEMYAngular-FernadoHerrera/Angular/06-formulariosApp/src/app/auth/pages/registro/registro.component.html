@@ -11,11 +11,11 @@
             type="text"
             class="form-control"
             placeholder="Nombre del usuario"
-            formControlName="nombre"
-          />
-          <span class="form-text text-danger" *ngIf="campoNoValido('nombre')"
-            >Debe de ser un formato nombre/apellido</span
-          >
+            formControlName="nombre"/>
+          <span class="form-text text-danger" 
+                *ngIf="campoNoValido('nombre')">
+                Debe de ser un formato nombre/apellido
+          </span>
         </div>
       </div>
       <!-- Email -->
@@ -26,11 +26,20 @@
             type="email"
             class="form-control"
             placeholder="Email del usuario"
-            formControlName="email"
-          />
-          <span class="form-text text-danger" *ngIf="campoNoValido('email')"
-          >Debe de ser un formato email</span
-        >
+            formControlName="email"/>
+          <span class="form-text text-danger" 
+                *ngIf="campoNoValido('email')">
+                {{emailErrorMessage}}
+          </span>
+          <!-- <span class="form-text text-danger" *ngIf="emailRequired()"
+            >Debe incluir un email.</span
+          >
+          <span class="form-text text-danger" *ngIf="emailFormat()"
+            >Debe ser formato email.</span
+          >
+          <span class="form-text text-danger" *ngIf="emailUsed()"
+            >Este email ya existe.</span
+          > -->
         </div>
       </div>
       <!-- Username -->
@@ -41,7 +50,11 @@
             type="text"
             class="form-control"
             placeholder="Username del usuario"
-          />
+            formControlName="username"/>
+          <span class="form-text text-danger" 
+                *ngIf="campoNoValido('username')">
+                Debe de ser un usuario que no exista ya.
+          </span>
         </div>
       </div>
       <!-- Password -->
@@ -52,7 +65,11 @@
             type="password"
             class="form-control"
             placeholder="Password del usuario"
-          />
+            formControlName="password"/>
+          <span class="form-text text-danger" 
+                *ngIf="campoNoValido('password')">
+                La contraseña tiene que tener almenos 6 caracteres.
+          </span>
         </div>
       </div>
       <!-- PasswordConf -->
@@ -63,7 +80,11 @@
             type="password"
             class="form-control"
             placeholder="Confirma tu password de usuario"
-          />
+            formControlName="password2"/>
+          <span class="form-text text-danger" 
+                *ngIf="campoNoValido('password')">
+                Las contraseñas deben coincidir.
+          </span>
         </div>
       </div>
       <div class="row">
@@ -71,8 +92,8 @@
           <button
             class="btn btn-primary float-end"
             type="submit"
-            (click)="guardar()"
-          >
+            [disabled]="myForm.pending"
+            (click)="guardar()">
             Guardar
           </button>
         </div>
@@ -81,7 +102,17 @@
   </div>
 </div>
 <h2>Form Valid: {{ myForm.valid }}</h2>
+<h2>Form Sratus: {{ myForm.status }}</h2>
+
+<h2>Errors</h2>
+<pre>{{ myForm.errors | json }}</pre>
 <h2>Nombre</h2>
 <pre>{{ myForm.controls["nombre"].errors | json }}</pre>
 <h2>Email</h2>
 <pre>{{ myForm.controls["email"].errors | json }}</pre>
+<h2>Username</h2>
+<pre>{{ myForm.controls["username"].errors | json }}</pre>
+<h2>Password</h2>
+<pre>{{ myForm.controls["password"].errors | json }}</pre>
+<h2>Password2</h2>
+<pre>{{ myForm.controls["password2"].errors | json }}</pre>

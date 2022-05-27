@@ -1,0 +1,36 @@
+<body class="background-img">
+  <div class="container">
+    <h1 class="container__title animate__animated animate__flipInX">crud</h1>
+  </div>
+  <div class="chartContainer">
+    <div>
+      <p-table [value]="products" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Ofers</th>
+                <th>Country</th>
+                <th>City</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{usuarios.username}}</td>
+                <td>{{usuario.password}}</td>
+                <td>{{usuario.email}}</td>
+                <td>{{usuario.ofers}}</td>
+                <td>{{usuario.country}}</td>
+                <td>{{usuario.city}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+    </div>
+    <hr>
+    <div>
+      
+    </div>
+  </div>
+</body>
