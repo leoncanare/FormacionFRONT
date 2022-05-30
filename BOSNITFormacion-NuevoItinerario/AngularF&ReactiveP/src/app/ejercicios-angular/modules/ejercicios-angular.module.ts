@@ -11,6 +11,10 @@ import { ExternalLibraryComponent } from '../pages/external-library/external-lib
 import { GraphicsModule } from '../pages/external-library/graphics.module';
 import { CrudComponent } from '../pages/crud/crud.component';
 import { CrudModule } from '../pages/crud/crud.module';
+import { PrimengModule } from './primeng.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -27,10 +31,11 @@ import { CrudModule } from '../pages/crud/crud.module';
     CommonModule,
     EjerciciosAngularRoutingModule,
     GraphicsModule,
-    CrudModule
+    PrimengModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
-    
   ]
 })
 export class EjerciciosAngularModule { }

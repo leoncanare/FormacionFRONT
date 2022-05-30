@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-//PrimeNg
-import {TableModule} from 'primeng/table';
+import { PrimengModule } from '../../modules/primeng.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    TableModule
+    PrimengModule,
   ],
-  declarations: []
+  declarations: [
+  ]
 })
 export class CrudModule { }

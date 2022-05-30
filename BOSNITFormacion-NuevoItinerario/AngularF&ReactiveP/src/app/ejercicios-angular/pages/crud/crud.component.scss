@@ -14,9 +14,6 @@ $blue-text: #18323d;
 
 body {
   padding-top: 190px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .background-img {
@@ -41,3 +38,24 @@ body {
     margin-bottom: 3rem;
   }
 }
+
+.chartContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &__form {
+    margin-right: 3rem;
+    width: 400px;
+  }
+}
+
+button{
+  margin-right: 1rem;
+
+}
+
+
+
+
+
