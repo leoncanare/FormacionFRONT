@@ -1,0 +1,389 @@
+<body class="background-img">
+  <div class="grid container">
+    <h1 class="container__title animate__animated animate__flipInX">crud</h1>
+  </div>
+  <div class="chartContainer">
+    <div class="chartContainer__form">
+      <p-card id="card">
+        <form (ngSubmit)="guardar(crudForm.value)" [formGroup]="crudForm">
+          <div class="p-grid p-fluid">
+            <!-- Nombre -->
+            <div class="chartContainer__formfield">
+              <h5 id="title">Nombre</h5>
+              <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                  <i class="pi pi-user"></i>
+                </span>
+                <input
+                  type="text"
+                  pInputText
+                  class="form-control"
+                  formControlName="nombre"
+                  placeholder="Nombre del ususario..."
+                  styleClass="wid600"
+                />
+              </div>
+              <small class="p-invalid">
+                Debes insertar un nombre valido.
+              </small>
+            </div>
+            <!-- Correo -->
+            <div class="chartContainer__formfield">
+              <h5>Correo</h5>
+              <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                  <i class="pi pi-envelope"></i>
+                </span>
+                <input
+                  type="email"
+                  pInputText
+                  class="form-control"
+                  formControlName="correo"
+                  placeholder="Email del ususario..."
+                />
+              </div>
+              <small class="p-invalid">
+                El campo debe ser formato email.
+              </small>
+            </div>
+            <!-- Contraseña -->
+            <div class="chartContainer__formfield">
+              <h5>Contraseña</h5>
+              <p-password
+                [toggleMask]="true"
+                formControlName="contraseña"
+              ></p-password>
+            </div>
+            <!-- Contraseña2 -->
+            <div class="chartContainer__formfield">
+              <h5>Confirma tu contraseña</h5>
+              <p-password
+                [toggleMask]="true"
+                formControlName="contraseña2"
+              ></p-password>
+            </div>
+            <!-- Suscripcion -->
+            <div class="chartContainer__formfield">
+              <span> Quiero recibir ofertas. </span>
+              <p-inputSwitch formControlName="suscrito"></p-inputSwitch>
+            </div>
+            <!-- Pais -->
+            <div class="chartContainer__formfield">
+              <h5>Pais</h5>
+              <p-autoComplete
+                formControlName="pais"
+                [suggestions]="filteredCountries"
+                (completeMethod)="filterCountry($event)"
+                field="name"
+                [dropdown]="true"
+                optionValue="name"
+                placeholder="Pais de procedencia..."
+              >
+                <ng-template let-country pTemplate="item">
+                  <div class="country-item">
+                    <div>{{ country.name }}</div>
+                  </div>
+                </ng-template>
+              </p-autoComplete>
+            </div>
+            <!-- Ciudad -->
+            <div class="">
+              <h5>Ciudad</h5>
+              <div class="p-inputgroup">
+                <input
+                  type="text"
+                  pInputText
+                  class="form-control"
+                  formControlName="ciudad"
+                  placeholder="Ciudad de residencia..."
+                />
+              </div>
+            </div>
+            <div class="">
+                <button
+                  pButton
+                  pRipple
+                  label="Guardar"
+                  type="submit"
+                  [disabled]="crudForm.invalid"
+                  class="btn"
+                  (click)="guardar(crudForm.value)">   
+                </button>
+            </div>
+          </div>
+        </form>
+      </p-card>
+    </div>
+    <div class="chartContainer__table">
+      <p-table [value]="usuarios" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+          <tr class="labels">
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Suscrito</th>
+            <th>Pais</th>
+            <th>Ciudad</th>
+            <th>Acciones</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-usuario>
+          <tr>
+            <td>{{ usuario.username }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>
+              <i *ngIf="usuario.ofers" class="pi pi-check"></i>
+            </td>
+            <td>{{ usuario.country }}</td>
+            <td>{{ usuario.city }}</td>
+            <td>
+              <button
+                pButton
+                id="eidt"
+                icon="pi pi-pencil"
+                class="p-button-rounded p-button-secondary"
+                (click)="(0)"
+              ></button>
+              <button
+                pButton
+                id="delete"
+                icon="pi pi-trash"
+                class="p-button-rounded p-button-danger"
+                (click)="(0)"
+              ></button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <hr />
+  </div>
+</body>
+
+ejemplo 2
+
+<body class="background-img">
+  <div class="grid container">
+    <h1 class="container__title animate__animated animate__flipInX">crud</h1>
+  </div>
+  <div class="chartContainer">
+    <div class="chartContainer__form">
+      <mat-card>
+        <mat-card-title>Nombre persona</mat-card-title>
+        <form (ngSubmit)="guardar()" autocomplete="off" [formGroup]="crudForm">
+          <div class="format">
+            <!-- Nombre -->
+            <mat-form-field class="field" appearance="fill">
+              <mat-label>Nombre</mat-label>
+              <span matSuffix class="material-icons"> person </span>
+              <input matInput type="text" matInput formControlName="username" />
+              <mat-error *ngIf="campoNoValido('nombre')">
+                Este campo es obligatorio.
+              </mat-error>
+            </mat-form-field>
+            <!-- Correo -->
+            <mat-form-field class="field" appearance="fill">
+              <mat-label>Email</mat-label>
+              <span matSuffix class="material-icons"> email </span>
+              <input
+                type="email"
+                matInput
+                formControlName="email"
+                placeholder="Ex. user@gmail.com"
+              />
+              <mat-error *ngIf="campoNoValido('correo')">
+                Porfavor inserte un email valido.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="format">
+            <!-- Contraseña -->
+            <mat-form-field class="field" appearance="fill">
+              <mat-label>Contraseña</mat-label>
+              <span matSuffix class="material-icons"> password </span>
+              <input
+                matInput
+                type="password"
+                matInput
+                formControlName="password"
+              />
+              <mat-error *ngIf="campoNoValido('contraseña')">
+                Este campo es obligatorio.
+              </mat-error>
+            </mat-form-field>
+            <!-- Contraseña2 -->
+            <mat-form-field class="field" appearance="fill">
+              <mat-label>Confirma tu contraseña</mat-label>
+              <span matSuffix class="material-icons"> password </span>
+              <input
+                matInput
+                type="password"
+                matInput
+                formControlName="password2"
+              />
+              <mat-error *ngIf="campoNoValido('contraseña2')">
+                Este campo es obligatorio.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <!-- Pais -->
+          <div class="format">
+            <mat-form-field class="field" appearance="fill">
+              <mat-label>Pais</mat-label>
+              <span matSuffix class="material-icons"> public </span>
+              <mat-select formControlName="country" required>
+                <mat-option>None</mat-option>
+                <mat-option
+                  *ngFor="let pais of paises | orderPais"
+                  [value]="pais.name.common"
+                >
+                  {{ pais.name.common }}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="campoNoValido('pais')">
+                Este campo es obligatorio.
+              </mat-error>
+            </mat-form-field>
+            <!-- Ciudad -->
+            <mat-form-field class="field" appearance="fill">
+              <mat-label>Ciudad</mat-label>
+              <span matSuffix class="material-icons"> location_city </span>
+              <input matInput type="text" matInput formControlName="city" />
+              <mat-error *ngIf="campoNoValido('ciudad')">
+                Este campo es obligatorio.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="format">
+            <!-- Suscripcion -->
+            <mat-slide-toggle formControlName="ofers">
+              Recibir notificaciones.
+            </mat-slide-toggle>
+          </div>
+        </form>
+        <mat-card-actions align="end">
+          <button mat-raised-button (click)="guardar()" color="primary">
+            GUARDAR
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="chartContainer__table">
+      <!-- <mat-form-field appearance="standard">
+          <mat-label>Filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+        </mat-form-field> -->
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+          <!-- Nombre -->
+          <ng-container matColumnDef="username">
+            <th id="title" mat-header-cell *matHeaderCellDef mat-sort-header>
+              Nombre
+            </th>
+            <td mat-cell *matCellDef="let row">{{ row.username }}</td>
+          </ng-container>
+
+          <!-- Correo -->
+          <ng-container matColumnDef="email">
+            <th id="title" mat-header-cell *matHeaderCellDef mat-sort-header>
+              Correo
+            </th>
+            <td mat-cell *matCellDef="let row">{{ row.email }}</td>
+          </ng-container>
+
+          <!-- Suscripcion -->
+          <ng-container matColumnDef="ofers">
+            <th id="title" mat-header-cell *matHeaderCellDef mat-sort-header>
+              Suscripcion
+            </th>
+            <td mat-cell *matCellDef="let row">{{ row.ofers }}</td>
+          </ng-container>
+
+          <!-- Pais -->
+          <ng-container matColumnDef="country">
+            <th id="title" mat-header-cell *matHeaderCellDef mat-sort-header>
+              Pais
+            </th>
+            <td mat-cell *matCellDef="let row">{{ row.country }}</td>
+          </ng-container>
+
+          <!-- Ciudad -->
+          <ng-container matColumnDef="city">
+            <th id="title" mat-header-cell *matHeaderCellDef mat-sort-header>
+              Ciudad
+            </th>
+            <td mat-cell *matCellDef="let row">{{ row.city }}</td>
+          </ng-container>
+
+          <!-- Acciones -->
+          <ng-container matColumnDef="action">
+            <th id="title" mat-header-cell *matHeaderCellDef >
+              Aciones
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <button mat-icon-button (click)="editUser(row)" color="primary">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+          <!-- Row shown when there is no matching data. -->
+          <!-- <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+            </tr> -->
+        </table>
+
+        <mat-paginator
+          [pageSizeOptions]="[6, 10, 25, 100]"
+          aria-label="Select page of users"
+        ></mat-paginator>
+      </div>
+    </div>
+    <hr />
+  </div>
+</body>
+
+<!-- <p-table [value]="usuarios" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr class="labels">
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Suscrito</th>
+      <th>Pais</th>
+      <th>Ciudad</th>
+      <th>Acciones</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-usuario>
+    <tr>
+      <td>{{ usuario.username }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>
+        <i *ngIf="usuario.ofers" class="pi pi-check"></i>
+      </td>
+      <td>{{ usuario.country }}</td>
+      <td>{{ usuario.city }}</td>
+      <td>
+        <button
+          pButton
+          id="eidt"
+          icon="pi pi-pencil"
+          class="p-button-rounded p-button-secondary"
+          (click)="(0)"
+        ></button>
+        <button
+          pButton
+          id="delete"
+          icon="pi pi-trash"
+          class="p-button-rounded p-button-danger"
+          (click)="openDeleteDialog()"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table> -->

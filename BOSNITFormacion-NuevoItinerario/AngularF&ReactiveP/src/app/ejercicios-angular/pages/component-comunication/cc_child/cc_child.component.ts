@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { CompComService } from 'src/app/ejercicios-angular/services/compCom.service';
+import { CompComService } from 'src/app/ejercicios-angular/pages/component-comunication/service/compCom.service';
 
 @Component({
   selector: 'app-cc-child',

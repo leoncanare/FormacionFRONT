@@ -1,5 +1,0 @@
-DUDAS:
-
-El boton InputParent no es funcional al 100%.
-
-Carpeta share su utilidad y es correcto colocar los services ahi o en la carpeta ejerccios.

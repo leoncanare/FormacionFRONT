@@ -1,0 +1,108 @@
+<mat-card>
+  <mat-card-title> </mat-card-title>
+  <form (ngSubmit)="submit()" autocomplete="off" [formGroup]="crudForm">
+    <div class="format">
+      <!-- Nombre -->
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <span matSuffix class="material-icons"> person </span>
+        <input matInput type="text" matInput formControlName="username" />
+        <mat-error *ngIf="campoNoValido('username')">
+          Este campo es obligatorio.
+        </mat-error>
+      </mat-form-field>
+      <!-- Correo -->
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Email</mat-label>
+        <span matSuffix class="material-icons"> email </span>
+        <input
+          type="email"
+          matInput
+          formControlName="email"
+          placeholder="Ex. user@gmail.com"
+        />
+        <mat-error *ngIf="campoNoValido('email')">
+          Este campo es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="campoNoValido('email')">
+          Porfavor inserte un email valido.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="format">
+      <!-- Contraseña -->
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <span matSuffix class="material-icons"> password </span>
+        <input
+          matInput
+          type="password"
+          matInput
+          formControlName="password"
+        />
+        <mat-error *ngIf="campoNoValido('password')">
+          Este campo es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="campoNoValido('password')">
+          La contraseña debe tener almenos 4 caracteres.
+        </mat-error>
+      </mat-form-field>
+      <!-- Contraseña2 -->
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Confirma tu contraseña</mat-label>
+        <span matSuffix class="material-icons"> password </span>
+        <input
+          matInput
+          type="password"
+          matInput
+          formControlName="password2"
+        />
+        <mat-error *ngIf="campoNoValido('password2')">
+          Este campo es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="campoNoValido('password2')">
+          Las contraseñas deben coincidir.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <!-- Pais -->
+    <div class="format">
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Pais</mat-label>
+        <span matSuffix class="material-icons"> public </span>
+        <mat-select formControlName="country" required>
+          <mat-option>None</mat-option>
+          <mat-option
+            *ngFor="let pais of paises | orderPais"
+            [value]="pais.name.common"
+          >
+            {{ pais.name.common }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="campoNoValido('country')">
+          Este campo es obligatorio.
+        </mat-error>
+      </mat-form-field>
+      <!-- Ciudad -->
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Ciudad</mat-label>
+        <span matSuffix class="material-icons"> location_city </span>
+        <input matInput type="text" matInput formControlName="city" />
+        <mat-error *ngIf="campoNoValido('city')">
+          Este campo es obligatorio.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="format">
+      <!-- Suscripcion -->
+      <mat-slide-toggle formControlName="ofers">
+        Recibir notificaciones.
+      </mat-slide-toggle>
+    </div>
+  </form>
+  <mat-card-actions align="end">
+    <button mat-raised-button (click)="submit()" color="primary">
+      GUARDAR
+    </button>
+  </mat-card-actions>
+</mat-card>

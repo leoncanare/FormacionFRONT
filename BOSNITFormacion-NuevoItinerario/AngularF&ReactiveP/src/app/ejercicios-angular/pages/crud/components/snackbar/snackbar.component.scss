@@ -1,0 +1,22 @@
+$white-text: white;
+$black-button: rgba(0, 0, 0, 0.151);
+$red-principal: #a43b3b;
+$red-principal2: #8a3131;
+$blue-text: #18323d;
+
+.container-title{
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.container-msg{
+    text-align: center;
+    font-weight: 500;
+    margin: 1rem;
+}
+button{
+    background: $black-button;
+    color: $white-text;
+}
+

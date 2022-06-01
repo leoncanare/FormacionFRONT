@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { EjerciciosAngularModule } from './ejercicios-angular/modules/ejercicios-angular.module';
+import { EjerciciosAngularModule } from './ejercicios-angular/ejercicios-angular.module';
 
 
 @NgModule({

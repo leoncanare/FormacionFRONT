@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { CryptoCurrencies } from '../interfaces/crypto.interface';
+import { CryptoCurrencies } from '../interface/crypto.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({

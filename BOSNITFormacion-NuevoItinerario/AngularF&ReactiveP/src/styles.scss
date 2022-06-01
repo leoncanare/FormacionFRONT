@@ -1,5 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+/*   color variables */
+$white-text: white;
+$red-principal: #a43b3b;
+$blue-text: #18323d;
+
 *{
     margin: 0;
     padding: 0;
+}
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.error.mat-snack-bar-container {
+    background: $red-principal;
+    color: $white-text;
+}
+
+.perfecto.mat-snack-bar-container {
+    background: $white-text;
+    color: black;
 }

@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 
-import { CryptoCurrencies } from '../../interfaces/crypto.interface';
-import { GeckoService } from 'src/app/ejercicios-angular/services/gecko.service';
+import { CryptoCurrencies } from '../../interface/crypto.interface';
+import { GeckoService } from 'src/app/ejercicios-angular/pages/external-library/service/gecko.service';
 
 @Component({
   selector: 'app-radar',

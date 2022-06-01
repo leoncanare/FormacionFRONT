@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 import { ChartConfiguration, ChartType, ChartData } from 'chart.js';
 
-import { GeckoService } from '../../services/gecko.service';
-import { CryptoCurrencies } from '../../interfaces/crypto.interface';
+import { GeckoService } from '../../service/gecko.service';
+import { CryptoCurrencies } from '../../interface/crypto.interface';
 
 
 @Component({

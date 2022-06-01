@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./ejercicios-angular/modules/ejercicios-angular.module').then(
+      import('./ejercicios-angular/ejercicios-angular.module').then(
         (m) => m.EjerciciosAngularModule
       ),
   },
