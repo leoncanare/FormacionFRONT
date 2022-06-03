@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EjerciciosAngular": {
+    "lifecycle": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ejercicios-angular",
+            "outputPath": "dist/lifecycle",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,10 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "./src/assets/theme/custom-material-theme.scss",
-              "src/styles.scss",
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/lara-light-blue/theme.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -75,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "EjerciciosAngular:build:production"
+              "browserTarget": "lifecycle:build:production"
             },
             "development": {
-              "browserTarget": "EjerciciosAngular:build:development"
+              "browserTarget": "lifecycle:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "EjerciciosAngular:build"
+            "browserTarget": "lifecycle:build"
           }
         },
         "test": {
@@ -102,7 +99,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -111,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "EjerciciosAngular"
+  "defaultProject": "lifecycle"
 }

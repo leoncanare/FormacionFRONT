@@ -22,10 +22,7 @@
           placeholder="Ex. user@gmail.com"
         />
         <mat-error *ngIf="campoNoValido('email')">
-          Este campo es obligatorio.
-        </mat-error>
-        <mat-error *ngIf="campoNoValido('email')">
-          Porfavor inserte un email valido.
+          {{ emailErrorMsg }}
         </mat-error>
       </mat-form-field>
     </div>
@@ -41,10 +38,7 @@
           formControlName="password"
         />
         <mat-error *ngIf="campoNoValido('password')">
-          Este campo es obligatorio.
-        </mat-error>
-        <mat-error *ngIf="campoNoValido('password')">
-          La contraseña debe tener almenos 4 caracteres.
+          {{ passwordErrorMsg }}
         </mat-error>
       </mat-form-field>
       <!-- Contraseña2 -->
@@ -58,10 +52,7 @@
           formControlName="password2"
         />
         <mat-error *ngIf="campoNoValido('password2')">
-          Este campo es obligatorio.
-        </mat-error>
-        <mat-error *ngIf="campoNoValido('password2')">
-          Las contraseñas deben coincidir.
+          {{ password2ErrorMsg }}
         </mat-error>
       </mat-form-field>
     </div>
@@ -95,14 +86,22 @@
     </div>
     <div class="format">
       <!-- Suscripcion -->
-      <mat-slide-toggle formControlName="ofers">
+      <mat-slide-toggle class="toggle" formControlName="ofers">
         Recibir notificaciones.
       </mat-slide-toggle>
     </div>
   </form>
-  <mat-card-actions align="end">
+  <mat-card-actions class="spacer">
     <button mat-raised-button (click)="submit()" color="primary">
       GUARDAR
     </button>
   </mat-card-actions>
 </mat-card>
+
+<!-- <h5>PASSWORD</h5>
+
+<pre>{{ crudForm.controls['password'].errors | json }}</pre>
+
+<h5>PASSWORD2</h5>
+
+<pre>{{ crudForm.controls['password2'].errors | json }}</pre> -->

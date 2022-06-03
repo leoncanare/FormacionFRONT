@@ -32,6 +32,7 @@ body {
     text-transform: uppercase;
     font-family: "Ubuntu", sans-serif;
     font-size: 2.5rem;
+    font-weight: 700;
     color: $red-principal2;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.438);
     letter-spacing: 0.3rem;
@@ -52,3 +53,13 @@ body {
     width: 800px;
   }
 }
+
+@media only screen and (max-width:1300px){
+  .chartContainer {
+    flex-direction: column;
+    &__form{
+      padding-bottom: 5rem;
+    }
+  }
+}
+

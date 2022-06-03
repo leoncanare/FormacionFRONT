@@ -3,13 +3,11 @@
     <h1 class="container__title animate__animated animate__flipInX">crud</h1>
   </div>
   <div class="chartContainer">
-    <div class="chartContainer__form">
+    <div class="chartContainer__form animate__animated animate__fadeInLeft">
       <app-form #form></app-form>
     </div>
-    <div class="chartContainer__table">
-      <app-table
-        (observableToForm)="form.crudForm.patchValue($event)"
-      ></app-table>
+    <div class="chartContainer__table animate__animated animate__fadeInRight">
+      <app-table (observableToForm)="form.patchForm($event)"></app-table>
     </div>
     <hr />
   </div>

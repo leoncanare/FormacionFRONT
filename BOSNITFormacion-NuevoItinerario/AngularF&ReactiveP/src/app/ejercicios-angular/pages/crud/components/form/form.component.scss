@@ -1,3 +1,8 @@
+/*   color variables */
+$white-text: white;
+$red-principal: #a43b3b;
+$blue-text: #18323d;
+
 .format {
   display: flex;
   justify-content: center;
@@ -6,6 +11,23 @@
     width: 100%;
   }
 }
-.material-icons{
-    opacity: 0.5;
-  }
+.material-icons {
+  opacity: 0.5;
+}
+
+.mat-raised-button {
+  background-color: $blue-text
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: $blue-text; /*replace with your color*/
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: #18323d67;  /*replace with your color*/
+}
+
+.spacer {
+  margin-top: 1rem;
+  margin-left: 40%;
+}

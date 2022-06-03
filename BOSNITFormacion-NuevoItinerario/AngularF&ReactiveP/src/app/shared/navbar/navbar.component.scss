@@ -140,12 +140,13 @@ $radius: 0.5rem;
         margin-top: 1rem;
       }
       &item {
+        padding-left: 28%;
         display: inline-flex;
       }
     }
   }
   .drop {
-    margin-right: 3rem;
+    margin-right: 0;
   }
 }
 
