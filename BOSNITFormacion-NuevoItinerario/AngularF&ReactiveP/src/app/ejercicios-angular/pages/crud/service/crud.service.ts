@@ -12,7 +12,7 @@ import { SnackbarComponent } from '../components/snackbar/snackbar.component';
 export class CrudService {
 
 dbUsers: string = 'http://localhost:3000/usuarios/';
-urlUsers: string = 'https://my-json-server.typicode.com/leoncanare/JSON/usuarios';
+//dbUsers: string = 'https://my-json-server.typicode.com/leoncanare/JSON/usuarios/';
 
 constructor( private http: HttpClient,
   private _snackBar: MatSnackBar) { }

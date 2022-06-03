@@ -68,7 +68,7 @@ export class FormComponent implements OnInit {
     if (this.crudForm.invalid) {
       this.crudForm.markAllAsTouched();
       return;
-    } else if (id === '') {
+    } else if (!id) {
       delete formValue.password2;
       this.crudService.addUser(formValue).subscribe({
         next: (res) => {
@@ -78,7 +78,7 @@ export class FormComponent implements OnInit {
             'Aceptar',
             'perfecto'
           );
-          this.clearFrom();
+          this.crudForm.reset();
         },
         error: () => {
           this.crudService.postSnakbar(

@@ -1,13 +1,14 @@
 $white-text: white;
 $black-button: rgba(0, 0, 0, 0.151);
-$gre-txt: rgb(88, 88, 88);
+$gre-txt: rgb(0, 0, 0);
 $red-principal: #a43b3b;
 $red-principal2: #8a3131;
 $blue-text: #18323d;
 
 .container-title{
     text-align: center;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 500;
     margin: 1rem;
 }
 
@@ -15,7 +16,6 @@ $blue-text: #18323d;
     text-align: center;
     font-weight: 500;
     margin: 1rem;
-    color: $gre-txt;
 }
 button{
     background: $black-button;

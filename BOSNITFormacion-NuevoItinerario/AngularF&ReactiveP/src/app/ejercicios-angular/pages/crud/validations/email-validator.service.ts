@@ -15,13 +15,15 @@ import { map } from 'rxjs/operators';
 export class EmailValidatorService implements AsyncValidator {
   //Generamos una constante
   originalMail: string | null = null;
+  dbUsers: string = 'http://localhost:3000/usuarios';
+  //dbUsers: string = 'https://my-json-server.typicode.com/leoncanare/JSON/usuarios';  
 
   constructor(private http: HttpClient) {}
 
   validate(control: AbstractControl): Observable<ValidationErrors | null> {
     const email = control.value;
     return this.http
-      .get<Usuario[]>(`http://localhost:3000/usuarios?q=${email}`)
+      .get<Usuario[]>(`${this.dbUsers}?q=${email}`)
       .pipe(
         map((resp) => {
           if (this.originalMail === email) {
