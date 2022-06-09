@@ -23,9 +23,8 @@ body{
     }
 
     .calculadora{
-        display: grid;
-        grid-template-columns: repeat(4,75px);
-        grid-template-rows: 160px repeat(5, 75px);
+        display: flex;
+        width: 200px;
         background-color: $color-calc;
         padding: 15px;
         border-radius: 10px;
@@ -46,7 +45,7 @@ body{
             background-color: #7085ab;
         }
 
-        .pantalla{
+        &-screen{
             display: flex;
             grid-column: 1 / -1;
             padding: 15px;

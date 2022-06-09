@@ -22,12 +22,10 @@ body .container {
 }
 
 body .calculadora {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (75px)[4];
-      grid-template-columns: repeat(4, 75px);
-  -ms-grid-rows: 160px (75px)[5];
-      grid-template-rows: 160px repeat(5, 75px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
   background-color: #103373;
   padding: 15px;
   border-radius: 10px;
@@ -51,7 +49,7 @@ body .calculadora button:active {
   background-color: #7085ab;
 }
 
-body .calculadora .pantalla {
+body .calculadora-screen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

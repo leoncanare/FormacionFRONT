@@ -1,0 +1,219 @@
+// font-family: 'Roboto', sans-serif;
+
+$digi-orange: #ff991a;
+$digi-blue: #2675af;
+$digi-blue-text: #194f76;
+$digi-soft-blue: #afdeea;
+$digi-yellow: #fee47b;
+$red: #ff0000;
+$black: #000000;
+$white: #ffffff;
+
+@font-face {
+  font-family: "digiFont";
+  src: url(../fonts/DigimonBasic.ttf) format("truetype");
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle, $digi-orange 50%, $digi-blue 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgTitle {
+    width: 200px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .digiDex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 700px;
+    background: $digi-blue;
+    border: 2px solid $black;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px $black;
+    &-title {
+      font-family: "digiFont", sans-serif;
+      font-size: 4rem;
+      font-weight: 800;
+      margin: 0;
+      margin-top: -1.5rem;
+      padding: 0;
+      background: -webkit-linear-gradient(
+        0deg,
+        $digi-orange 0%,
+        $digi-yellow 100%
+      );
+      background-clip: "";
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 0.7px;
+      -webkit-text-stroke-color: $black;
+      &-box {
+        &-buttons {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    &-text {
+      font-family: "digiFont", sans-serif;
+      margin: 0;
+      margin-top: 8rem;
+      font-size: 2rem;
+      color: $digi-yellow;
+      text-shadow: 2px 2px 3px $digi-blue-text;
+    }
+  }
+
+  //INPUT STYLES:
+  input {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 5px;
+    width: 600px;
+    height: 50px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: $digi-soft-blue;
+  }
+  input:focus {
+    outline-color: $digi-orange;
+  }
+  ::placeholder {
+    color: $white;
+  }
+
+  //BUTTON STYLES:
+  button {
+    margin-right: 1rem;
+    cursor: pointer;
+    color: $white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    border-width: 2px;
+    border-color: $digi-blue-text;
+    box-shadow: inset 2px 2px 2px 0px $digi-yellow;
+    background: $digi-orange;
+    border-radius: 15px;
+    padding: 15px 25px;
+    letter-spacing: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  button:hover {
+    color: $black;
+  }
+  button:before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: $white;
+    animation: shiny 3s ease-in-out infinite;
+  }
+  button:active {
+    opacity: 0.5;
+  }
+  button:disabled {
+    background: $red;
+  }
+  //Button-shiny-animation
+  @keyframes shiny {
+    0% {
+      -webkit-transform: scale(0) rotate(45deg);
+      opacity: 0;
+    }
+    80% {
+      -webkit-transform: scale(0) rotate(45deg);
+      opacity: 0.5;
+    }
+    81% {
+      -webkit-transform: scale(4) rotate(45deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(50) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  //Background-btn-colors
+  .rookie {
+    background: #ffca1a;
+  }
+  .champion {
+    background: #ff991a;
+  }
+  .ultimate {
+    background: #ff791a;
+  }
+  .mega {
+    background: #ff4c1a;
+  }
+  
+  #dex2 {
+    background: $digi-soft-blue;
+    margin-top: 0.5rem;
+  }
+
+  #digiListContainer {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+    padding-right: 1rem;
+    overflow-y: scroll;
+  }
+  
+  //DIV(script) ELEMENTLIST STYLES:
+  .elementList {
+    font-family: "Roboto", sans-serif;
+    list-style-type: none;
+    background-color: $white;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "name image"
+      "level image";
+    text-align: left;
+  }
+
+  .elementList > h2 {
+    grid-area: name;
+    margin-bottom: 0px;
+  }
+
+  .elementList > p {
+    grid-area: level;
+    margin: 0;
+    //margin-top: -18px;
+  }
+
+  .elementList > img {
+    grid-area: image;
+    max-height: 100px;
+  }
+}
+
+
+
+

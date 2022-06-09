@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="leon.cantalapiedra" />
+        <link rel="icon" href="img/icon.ico" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
+        <!-- Google Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <title>Counter</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="counter">
+                <div class="counter-screen">
+                    <span id="counterValue">0</span>
+                </div>
+                <div class="counter-box">
+                    <p class="counter-title">SETUP</p>
+                    <div class="counter-buttons">
+                        <button id="start" class="material-symbols-outlined btn" 
+                        onclick="startCounter()" value="start">
+                            play_arrow
+                        </button>
+                        <button id="pause" class="material-symbols-outlined btn" onclick="stopCounter()" value="pause">
+                            pause
+                        </button>
+                        <button id="reset" class="material-symbols-outlined 
+                        btn"
+                        onclick="resetCounter()" value="reset">
+                        replay
+                        </button>
+                    </div>
+                </div>
+                <div class="counter-box">
+                    <p class="counter-title">COUNT</p>
+                    <div class="counter-buttons">
+                        <button class="material-symbols-outlined btn" onclick="upCounter()" value="count-up">
+                            arrow_upward
+                        </button>
+                        <button class="material-symbols-outlined btn" onclick="downCounter()" value="count-down">
+                            arrow_downward
+                        </button>
+                    </div>
+                </div>
+                <div class="counter-box2">
+                    <p class="counter-title">SET</p>
+                    <input type="number" id="setCounter" value="0">
+                    <p class="counter-title">STEP</p>
+                    <input type="number" id="stepConter" value="1">
+                </div>
+                <div class="counter-data">
+                    <p id="counterData">DATA</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="script.js" type="text/javascript"></script>
+</html>
