@@ -66,10 +66,6 @@ body .digiDex-title {
   -webkit-text-stroke-color: #000000;
 }
 
-body .digiDex-title-box-buttons {
-  margin-bottom: 1rem;
-}
-
 body .digiDex-text {
   font-family: "digiFont", sans-serif;
   margin: 0;
@@ -114,6 +110,7 @@ body ::placeholder {
 
 body button {
   margin-right: 1rem;
+  margin-bottom: 1rem;
   cursor: pointer;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
