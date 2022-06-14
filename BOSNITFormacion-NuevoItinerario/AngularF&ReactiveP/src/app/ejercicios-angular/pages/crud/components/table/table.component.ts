@@ -44,7 +44,7 @@ export class TableComponent implements OnInit {
         this.obtainTableData();
       });
   }
-  
+  //Metodo que realiza un get a nuestra db y establece los datos en cuanto a nuestra estructura de tabla.
   obtainTableData() {
     this.crudService.getAllUsers().subscribe({
       next: (res) => {
@@ -86,6 +86,7 @@ export class TableComponent implements OnInit {
         });
     });
   }
+  //Desde aqui comunicamos nuestra tabla con el formulario el el caso de querer editar un usario ya creado.
   @Output()
   observableToForm: EventEmitter<any> = new EventEmitter<any>();
 

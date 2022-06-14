@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle, #ff991a 50%, #2675af 100%);
+  background: radial-gradient(circle, #ff991a 40%, #2675af 100%);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
