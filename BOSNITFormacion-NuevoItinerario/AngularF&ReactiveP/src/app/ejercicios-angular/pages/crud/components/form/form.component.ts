@@ -90,7 +90,7 @@ export class FormComponent implements OnInit {
       });
     } else {
       this.updateUser(id);
-      this.crudForm.reset();
+      //this.crudForm.reset();
     }
   }
 
@@ -103,7 +103,8 @@ export class FormComponent implements OnInit {
           'Aceptar',
           'perfecto'
         );
-        this.crudForm.reset();
+        this.clearFrom();
+        //this.crudForm.reset();
       },
       error: () => {
         this.crudService.postSnakbar(

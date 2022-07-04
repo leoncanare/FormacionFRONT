@@ -213,7 +213,7 @@ body #dex2 {
 }
 
 body #digiListContainer {
-  height: 350px;
+  height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

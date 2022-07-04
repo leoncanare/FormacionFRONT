@@ -1,0 +1,38 @@
+/*   color variables */
+.format {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.format .field {
+  margin: 1rem;
+  width: 100%;
+}
+
+.material-icons {
+  opacity: 0.5;
+}
+
+.mat-raised-button {
+  background-color: #18323d;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #18323d;
+  /*replace with your color*/
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: #18323d67;
+  /*replace with your color*/
+}
+
+.spacer {
+  margin-top: 1rem;
+  margin-left: 40%;
+}
+/*# sourceMappingURL=form.component.css.map */

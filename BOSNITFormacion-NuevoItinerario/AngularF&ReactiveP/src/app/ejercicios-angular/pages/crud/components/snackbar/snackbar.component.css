@@ -1,0 +1,18 @@
+.container-title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 1rem;
+}
+
+.container-msg {
+  text-align: center;
+  font-weight: 500;
+  margin: 1rem;
+}
+
+button {
+  background: rgba(0, 0, 0, 0.151);
+  color: white;
+}
+/*# sourceMappingURL=snackbar.component.css.map */

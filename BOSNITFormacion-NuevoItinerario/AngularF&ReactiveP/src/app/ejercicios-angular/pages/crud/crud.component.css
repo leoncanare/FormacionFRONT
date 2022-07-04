@@ -1,0 +1,68 @@
+/*   color variables */
+body {
+  padding-top: 190px;
+}
+
+.background-img {
+  background-image: url(../../../../assets/img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: auto;
+  -webkit-clip-path: inset(9% 0 0 0);
+          clip-path: inset(9% 0 0 0);
+}
+
+.container {
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.container__title {
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #a43b3b;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.438);
+  letter-spacing: 0.3rem;
+  margin-bottom: 3rem;
+}
+
+.chartContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chartContainer__form {
+  margin-right: 3rem;
+  width: 600px;
+}
+
+.chartContainer__table {
+  width: 800px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .chartContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .chartContainer__form {
+    padding-bottom: 5rem;
+  }
+}
+/*# sourceMappingURL=crud.component.css.map */

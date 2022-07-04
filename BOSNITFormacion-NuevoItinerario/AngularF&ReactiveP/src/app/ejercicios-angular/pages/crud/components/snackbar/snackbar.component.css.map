@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAOA,AAAA,gBAAgB,CAAA;EACZ,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,OAAO;EAClB,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,IAAI;CACf;;AAED,AAAA,cAAc,CAAA;EACV,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,IAAI;CACf;;AACD,AAAA,MAAM,CAAA;EACF,UAAU,EAnBC,oBAAoB;EAoB/B,KAAK,EArBI,KAAK;CAsBjB",
+    "sources": [
+        "snackbar.component.scss"
+    ],
+    "names": [],
+    "file": "snackbar.component.css"
+}

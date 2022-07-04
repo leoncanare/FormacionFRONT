@@ -1,0 +1,158 @@
+/*   color variables */
+/*   border radius */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: fixed;
+  background-color: rgba(226, 226, 226, 0.781);
+  width: 100vw;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2.5rem;
+  -webkit-box-shadow: 0 0 10px #00000046;
+          box-shadow: 0 0 10px #00000046;
+  z-index: 100;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  margin: 0 3rem;
+}
+
+.nav__listlogo {
+  list-style: none;
+  margin-right: auto;
+}
+
+.nav__listlogoname {
+  text-decoration: none;
+  color: #18323d;
+  font-weight: 800;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.nav__listlogoico {
+  color: #a43b3b;
+  width: 2.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.nav__listlogoico:hover {
+  color: #00000075;
+}
+
+.nav__listitem {
+  list-style: none;
+  color: #18323d;
+  font-weight: bold;
+  position: relative;
+  padding: 1.5rem 1rem;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.nav__listitem:hover {
+  color: #a43b3b;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.nav__listitem:hover ul,
+.nav__listitem:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__listitemdrop {
+  position: absolute;
+  top: 4rem;
+  left: -1rem;
+  -webkit-box-shadow: 0 0 10px #00000046;
+          box-shadow: 0 0 10px #00000046;
+  background-color: #a43b3b;
+  border-radius: 0.5rem;
+  width: 18.7rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+.nav__listitemdrop hr {
+  border: 1px solid #18323d31;
+  width: 80%;
+  margin: auto;
+}
+
+.nav__listitemdrop a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.nav__listitemdrop li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  justify-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.nav__listitemdrop li:hover, .nav__listitemdrop li:focus {
+  background-color: #18323d77;
+}
+
+@media only screen and (max-width: 895px) {
+  .nav__list {
+    display: block;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav__listlogo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1rem;
+  }
+  .nav__listitem {
+    padding-left: 28%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .drop {
+    margin-right: 0;
+  }
+}
+/*# sourceMappingURL=navbar.component.css.map */

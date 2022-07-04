@@ -1,0 +1,26 @@
+/*   color variables */
+.chartBars {
+  width: 800px;
+  height: 400px;
+}
+
+.legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.5rem;
+  padding-left: 6.5rem;
+}
+
+.legend .logo {
+  width: 3rem;
+  padding: 0.3rem;
+  border-radius: 10%;
+}
+/*# sourceMappingURL=bars.component.css.map */

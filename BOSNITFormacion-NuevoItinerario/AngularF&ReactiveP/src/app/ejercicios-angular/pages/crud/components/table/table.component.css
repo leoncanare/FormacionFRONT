@@ -1,0 +1,22 @@
+/*   color variables */
+table {
+  width: 100%;
+}
+
+#title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #18323d;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+#pencil {
+  color: #18323d;
+}
+
+#susbs {
+  padding-left: 2rem;
+  color: #00a500;
+}
+/*# sourceMappingURL=table.component.css.map */
